@@ -8,6 +8,8 @@ import IMAGE4 from "../../public/images/interior.jpg"
 import IMAGE5 from "../../public/images/exterior.jpg"
 import IMAGE6 from "../../public/images/supervision.jpg"
 import IMAGE7  from "../../public/images/landscape.jpg"
+import IMAGE8  from "../../public/images/landscapemedium.jpg"
+import IMAGE9  from "../../public/images/landscapemobile.jpg"
 import styles from "../../styles/HomePage/solutionsbottom.module.scss";
 
 const SolutionsBottom = ({ lenis }: { lenis: Lenis | null }) => {
@@ -42,7 +44,7 @@ const SolutionsBottom = ({ lenis }: { lenis: Lenis | null }) => {
       title: t("HomePage:landscape"),
       text: t("HomePage:landscapetext"),
       text2: t("HomePage:landscapetext2"),
-      image: IMAGE7
+      image: [IMAGE7, IMAGE8, IMAGE9]
   }
 
   const [modal, setModal] = useState({ active: false, index: 0 });

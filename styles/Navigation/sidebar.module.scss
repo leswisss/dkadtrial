@@ -1,6 +1,6 @@
 .sidebar {
   width: 100vw;
-  height: 0svh;
+  height: 0dvh;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,8 +10,8 @@
 
 .sidebar__wrapper {
   width: 100vw;
-  height: 100svh;
-  min-height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
   background-color: var(--blue);
   color: var(--body-color);
 }

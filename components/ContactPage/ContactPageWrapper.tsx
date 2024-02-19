@@ -13,6 +13,8 @@ import Lenis from "@studio-freight/lenis";
 import { useTranslation } from "react-i18next";
 import IMAGE from "../../public/images/footerr6.jpg";
 import IMAGE2 from "../../public/images/reusable.jpg";
+import IMAGE3 from "../../public/images/reusablemedium.jpg";
+import IMAGE4 from "../../public/images/reusablemobile.jpg";
 
 const ContactPageWrapper = () => {
   const { t, i18n } = useTranslation();
@@ -47,7 +49,7 @@ const ContactPageWrapper = () => {
     text: t("ContactPage:fixedtext"),
     link: "mailto:onac464@yahoo.com",
     linktext: t("ContactPage:fixedcta"),
-    image: IMAGE2,
+    image: [IMAGE2, IMAGE3, IMAGE4]
   };
 
 

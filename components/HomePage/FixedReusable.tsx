@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import { SolutionModal, Rounded } from "..";
 import { useInView } from "react-intersection-observer";
@@ -15,7 +15,7 @@ interface dataInterface {
   text2?: string;
   link?: string;
   linktext?: string;
-  image: StaticImageData
+  image: StaticImageData[]
 }
 
 const FixedReusable = ({ linker, data }: { linker: boolean, data: dataInterface }) => {
@@ -28,6 +28,29 @@ const FixedReusable = ({ linker, data }: { linker: boolean, data: dataInterface 
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-300, 0]);
+
+  //IMAGE MAMAGEMENT
+  const [imageSet, setImage] = useState(data.image[0]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined" && window.innerWidth < 550) {
+        setImage(data.image[2]);
+      } else if (typeof window !== "undefined" && window.innerWidth < 950) {
+        setImage(data.image[1]);
+      } else {
+        setImage(data.image[0]);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   //Text Animation
   const { ref: ref, inView: inView } = useInView({
@@ -48,7 +71,7 @@ const FixedReusable = ({ linker, data }: { linker: boolean, data: dataInterface 
     <>
     <div className={styles.fixed} ref={container}>
       <motion.div className={styles.background__image} style={{ y }}>
-        <Image src={data.image} fill alt="LandScape Image" quality={100}  sizes="(max-width:600px) 100%, 100%"/>
+        <Image src={imageSet} fill alt="LandScape Image" quality={100}  sizes="(max-width:600px) 100%, 100%"/>
       </motion.div>
       <div className={`container ${styles.fixed__container}`}>
         <div className={styles.text__overflow} ref={ref}>
@@ -74,7 +97,7 @@ const FixedReusable = ({ linker, data }: { linker: boolean, data: dataInterface 
       </div>
     </div>
     {
-      !linker && <SolutionModal activeModal={activeModal} setActiveModal={setActiveModal} text={data.text} title={data.title} text2={data.text2} image={data.image}  />
+      !linker && <SolutionModal activeModal={activeModal} setActiveModal={setActiveModal} text={data.text} title={data.title} text2={data.text2} image={data.image[0]}  />
     }
     </>
   );

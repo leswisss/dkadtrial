@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import Lenis from "@studio-freight/lenis/types";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import IMAGE from "../../public/images/homehero2.jpg";
+import IMAGE2 from "../../public/images/homehero2medium.jpg";
+import IMAGE3 from "../../public/images/homehero2mobile.jpg";
 import styles from "../../styles/HomePage/hero.module.scss";
 
 const HomeHero = ({
@@ -58,6 +60,29 @@ const HomeHero = ({
 
     return letters;
   };
+
+  //IMAGE MAMAGEMENT
+  const [imageSet, setImage] = useState(IMAGE);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined" && window.innerWidth < 550) {
+        setImage(IMAGE3);
+      } else if (typeof window !== "undefined" && window.innerWidth < 950) {
+        setImage(IMAGE2);
+      } else {
+        setImage(IMAGE);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   //Animations Loader Refs
   useEffect(() => {
@@ -125,7 +150,7 @@ const HomeHero = ({
       <div className={styles.image__wrapper} ref={container}>
         <motion.div className={styles.himage__fill} style={{ y }}>
           <Image
-            src={IMAGE}
+            src={imageSet}
             alt="Home Page"
             fill
             quality={100}
