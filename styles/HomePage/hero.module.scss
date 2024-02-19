@@ -173,6 +173,15 @@
 
 @media screen and (max-width: 600px) {
   .hero__section {
+
+    .image__wrapper {
+      .himage__fill {
+        img {
+          object-fit: cover;
+          object-position: 70% 50%;
+        }
+      }
+    }
     .hero__container {
       .hero__text {
         width: 31rem;

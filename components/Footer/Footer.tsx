@@ -30,7 +30,7 @@ const Footer = () => {
   useEffect(() => {
     const handleResize = () => {
       if (typeof window !== "undefined" && window.innerWidth < 550) {
-        setTransform(-150);
+        setTransform(-100);
       } else if (typeof window !== "undefined" && window.innerWidth < 750) {
         setTransform(-250);
       } else {

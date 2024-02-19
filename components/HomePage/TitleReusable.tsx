@@ -35,7 +35,6 @@ const TitleReusable = ({title, text, classNames}: {title: string, text: string, 
     }
   }, []);
 
-  console.log(width)
 
   const splitwords = (phrase: string, condition: boolean) => {
     let body: JSX.Element[] = [];
