@@ -2,14 +2,14 @@ const transition = { duration: 0.7, ease: [0.7, 0, 0.3, 1] };
 
 export const sideBarAnim = {
   initial: {
-    height: "0vh",
+    height: "0svh",
   },
   entry: {
-    height: "100vh",
+    height: "100svh",
     transition: transition,
   },
   exit: {
-    height: "0vh",
+    height: "0svh",
     transition: transition,
   },
 };
