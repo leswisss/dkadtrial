@@ -25,14 +25,16 @@ const Footer = () => {
     offset: ["start end", "end end"],
   });
 
-  const [transform, setTransform] = useState(-400)
+  const [transform, setTransform] = useState(-400);
 
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== 'undefined' && window.innerWidth < 750) {
-        setTransform(-250)
+      if (typeof window !== "undefined" && window.innerWidth < 550) {
+        setTransform(-150);
+      } else if (typeof window !== "undefined" && window.innerWidth < 750) {
+        setTransform(-250);
       } else {
-        setTransform(-400)
+        setTransform(-400);
       }
     };
 
@@ -46,7 +48,6 @@ const Footer = () => {
   }, []);
 
   const y = useTransform(scrollYProgress, [0, 1], [transform, 0]);
-
 
   //Translations
   const { t, i18n } = useTranslation();
@@ -64,7 +65,7 @@ const Footer = () => {
   const logoRef = useRef(null);
   const footerRef = useRef(null);
   const refs = useRef<HTMLSpanElement[]>([]);
-  const betterText = t("Navigation:bettermarque")
+  const betterText = t("Navigation:bettermarque");
 
   const splitwords = () => {
     let body: JSX.Element[] = [];
