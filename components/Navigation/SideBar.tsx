@@ -16,7 +16,7 @@ import { usePathname } from "next/navigation";
 const SideBar = ({ activeSide, setActiveSide, setLocalState }: sideBarProps) => {
   const currentPathname = usePathname();
 
-  const activeInitial = currentPathname==="/fr" || currentPathname==="/en" ? 0 : currentPathname.includes("/projets") || currentPathname.includes("/about") ? 1 : currentPathname.includes("/projets") || currentPathname.includes("/a-propos") ? 2 : currentPathname.includes("/services") ? 3 : 0
+  const activeInitial = currentPathname==="/fr" || currentPathname==="/en" ? 0 : currentPathname.includes("/projets") || currentPathname.includes("/projects") ? 1 : currentPathname.includes("/about") || currentPathname.includes("/a-propos") ? 2 : currentPathname.includes("/services") ? 3 : 0
   
   const [activeLink, setActiveLink] = useState(activeInitial);
 

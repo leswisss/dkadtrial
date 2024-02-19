@@ -15,7 +15,6 @@ const NotFoundPage = () => {
   const currentLocale = i18n.language;
   const imageRef = useRef(null);
   const router = useRouter();
-  console.log(currentLocale);
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1 });

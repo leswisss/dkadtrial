@@ -25,7 +25,28 @@ const Footer = () => {
     offset: ["start end", "end end"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-400, 0]);
+  const [transform, setTransform] = useState(-400)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined' && window.innerWidth < 750) {
+        setTransform(-250)
+      } else {
+        setTransform(-400)
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const y = useTransform(scrollYProgress, [0, 1], [transform, 0]);
+
 
   //Translations
   const { t, i18n } = useTranslation();
