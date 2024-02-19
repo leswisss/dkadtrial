@@ -1,0 +1,36 @@
+.project__wrapper{
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .image__content{
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+
+    .image__overflow{
+      width: 100%;
+      height: 130%;
+      position: relative;
+
+      img{
+        object-fit: cover;
+      }
+    }
+
+    .image__overlay{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      padding: 1rem 0.7rem;
+    }
+  }
+}

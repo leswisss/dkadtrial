@@ -1,0 +1,18 @@
+.services__section{
+  width: 100%;
+
+  .services__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .header__text{
+      width: 80%;
+
+      p{
+        font-size: var(--h2-font-size);
+        line-height: 1;
+      }
+    }
+  }
+}

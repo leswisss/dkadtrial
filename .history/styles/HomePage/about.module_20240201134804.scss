@@ -1,0 +1,25 @@
+.about__section{
+  padding: 7rem 0 5rem;
+
+  .about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.about__main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 2rem;
+
+  .about__title{
+    .title__button{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      ba
+    }
+  }
+}

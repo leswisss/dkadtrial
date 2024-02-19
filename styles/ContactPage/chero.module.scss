@@ -1,0 +1,204 @@
+.contact__section {
+  width: 100%;
+
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .contact__wrapper {
+      width: 100%;
+
+      .contact__content {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3rem;
+        margin-left: auto;
+
+        .image__wrapper {
+          width: 100%;
+          aspect-ratio: 1155/763;
+          position: relative;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .contact__info {
+          margin-left: 5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .data__block {
+            display: grid;
+            gap: 0.5rem;
+
+            &.link {
+              &:hover {
+                span {
+                  &:nth-of-type(2) {
+                    left: 10px;
+                  }
+                }
+              }
+            }
+
+            span {
+              font-size: calc(var(--h3-font-size) - 0.7rem);
+              color: black;
+              line-height: 1;
+              position: relative;
+              left: 0;
+              transition: left 0.5s ease;
+
+              &:nth-of-type(1) {
+                color: var(--text-color-light);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.htext__main{
+  display: flex;
+  column-gap: 0.7rem;
+  flex-wrap: wrap;
+
+  .word__wrapper{
+    overflow: hidden;
+    display: block;
+
+    p{
+      display: block;
+      transform: translateY(-100%);
+    }
+  }
+}
+
+
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1150px) {
+  .contact__section {
+    .contact__container {
+      .contact__wrapper {
+        .contact__content {
+          width: 70%;
+
+          .contact__info {
+            margin-left: 5rem;
+            gap: 2rem;
+
+            .data__block {
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact__section {
+    .contact__container {
+      .contact__wrapper {
+        .contact__content {
+          width: 80%;
+
+          .contact__info {
+            margin-left: 5rem;
+            gap: 2rem;
+
+            .data__block {
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contact__section {
+    .contact__container {
+      .contact__wrapper {
+        .contact__content {
+          width: 90%;
+
+          .contact__info {
+            margin-left: 5rem;
+            gap: 2rem;
+
+            .data__block {
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .contact__section {
+    .contact__container {
+      .contact__wrapper {
+        .contact__content {
+          width: 100%;
+
+          .contact__info {
+            width: 100%;
+            margin-left: 0rem;
+            gap: 0rem;
+            row-gap: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .data__block {
+              gap: 0.5rem;
+
+              &.special {
+                width: 150%;
+              }
+
+              span {
+                font-size: calc(var(--h3-font-size) - 0.5rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .contact__section {
+    .contact__container {
+      .contact__wrapper {
+        .contact__content {
+          .contact__info {
+            grid-template-columns: repeat(1, 1fr);
+
+            .data__block {
+              &.special {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

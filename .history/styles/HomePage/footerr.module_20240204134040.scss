@@ -1,0 +1,21 @@
+.footerr__section{
+  width: 100%;
+
+  .footerr__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+
+    .left{
+      width: 35%;
+    }
+
+    .right{
+      width: 50%;
+      aspect-ratio: 16/9;
+      position: relative;
+    }
+  }
+
+}

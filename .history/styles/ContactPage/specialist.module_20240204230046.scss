@@ -1,0 +1,72 @@
+.specialist__section {
+  padding: 4rem 0 5rem;
+  width: 100%;
+  color: white;
+  background-color: var(--blue);
+
+  .special__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+
+      span {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-family: var(--semiBold-font);
+        line-height: 1;
+      }
+    }
+
+    .right {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: flex-start;
+      align-items: flex-end;
+
+      .right__text {
+        font-size: var(--h2-font-size);
+        line-height: 1.15;
+        position: relative;
+        top: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        
+      }
+
+      .rounded__button {
+        .rounded {
+          border: 1px solid #cbcbcb;
+
+          p {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s linear;
+            color: white;
+          }
+
+          &:hover {
+            p {
+              color: var(--blue);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.solution__section {
+  padding: 2rem 0 5rem;
+
+  .solution__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+}
+
+.header__overflow {
+  overflow: hidden;
+}
+
+.large__font {
+  font-size: calc(var(--biggest-font-size) - 3rem);
+  line-height: 1;
+}
+
+.p__font {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  line-height: 1.4;
+}

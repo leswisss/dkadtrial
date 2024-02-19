@@ -1,0 +1,13 @@
+.cursor {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background-color: var(--blue);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+
+
+}

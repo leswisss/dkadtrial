@@ -1,0 +1,32 @@
+.accordion{
+  width: 100%;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  border-bottom: 0.04rem solid var(--text-color-light);
+
+  .accordion__header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .h__left{
+      width: 100%;
+      
+      span{
+        text-align: start;
+      }
+    }
+
+    .h__right{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .accordion__data{
+    padding-top: 1rem;
+    width: 10;
+  }
+}

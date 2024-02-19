@@ -1,0 +1,14 @@
+.fixed{
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+
+  .bacground__image{
+    width: 100%;
+    height: 100vh;
+
+    img{
+      object-fit: c;
+    }
+  }
+}

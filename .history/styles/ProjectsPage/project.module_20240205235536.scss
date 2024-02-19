@@ -1,0 +1,112 @@
+.project__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  &:hover{
+    .image__content{
+      .image__overlay{
+        opacity: 1;
+      }
+    }
+
+    .text__content{
+
+    }
+
+  }
+
+  .image__content {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+
+    .image__overflow {
+      width: 100%;
+      height: 130%;
+      position: relative;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .image__overlay {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+      .p__services {
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        column-gap: 0.5rem;
+        row-gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        span {
+          font-size: var(--smaller-font-size);
+          color: white;
+          padding: 0.5rem 2rem;
+          border: 0.04rem solid rgb(190, 190, 190);
+          border-radius: 30px;
+          font-family: var(--light-font);
+        }
+      }
+    }
+  }
+
+  .text__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .left{
+      width: 85%;
+      overflow: hidden;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-start;
+      align-items: center;
+
+      span{
+        min-width: 0.9rem;
+        min-height: 0.9rem;
+        border: 0.08rem solid black;
+        border-radius: 50%;
+        display: block;
+        background-color: transparent;
+        transition: background;
+      }
+
+      p{
+        white-space: nowrap;
+        color: black;
+        line-height: 1;
+      }
+    }
+
+    .right{
+      span{
+        color: black;
+        line-height: 1;
+      }
+    }
+  }
+}

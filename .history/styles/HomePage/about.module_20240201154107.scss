@@ -1,0 +1,136 @@
+.about__section{
+  padding: 7rem 0 5rem;
+
+  .about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.about__main{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+
+  .about__title{
+    display: flex;
+    gap: 0.5rem;
+    width: 20%;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title__button{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: var(--blue);
+      border-radius: 50%;
+
+    }
+
+    .title__text{
+      text-transform: uppercase;
+      font-family: var(--semiBold-font);
+      line-height: 1;
+    }
+  }
+
+  .about__content{
+    width: 65%;
+    display: grid;
+    gap: 3rem;
+
+    .content__one{
+      position: relative;
+      top: -8px;
+
+      p{
+        font-size: var(--h2-font-size);
+        line-height: 1.15;
+      }
+    }
+
+    .content__two{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .content__two_main{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .subheader{
+          text-transform: capitalize;
+          font-family: var(--font-semiBold);
+        }
+
+        p{
+          color: var(--text-color-light);
+          font-size: var(--small-font-size);
+          line-height: 1.4;
+        }
+        
+      }
+    }
+
+    .content__three{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .main__image_wrapper{
+        width: 50%;
+        aspect-ratio: 1648/2160;
+        position: relative;
+        overflow: hidden;
+
+        .main__image_swiper{
+          height: 100%;
+          aspect-ratio: 4944/2160;
+          position: relative;
+          display: block;
+          will-change: transform;
+          transform: none;
+          transition: transform 0.7s;
+
+          img{
+            object-fit: cover;
+            object-position: 0% 0%;
+          }
+        }
+      }
+
+      .secondary__image_wrapper{
+        width: 15%;
+        aspect-ratio: 1648/2160;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+          .secondary__image_swiper{
+            transform: scale(1.1);
+          }
+        }
+
+        .secondary__image_swiper{
+          height: 100%;
+          aspect-ratio: 1648/2160;
+          position: relative;
+          display: block;
+          transition: transform 0.4s cubic-bezier(.7, 0, .3, 1);
+
+          img{
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+  }
+}

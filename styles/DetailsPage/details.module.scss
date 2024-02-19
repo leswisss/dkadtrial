@@ -1,0 +1,224 @@
+.details__section {
+  width: 100%;
+
+  .details__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .d__top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .about__title {
+        display: flex;
+        gap: 0.5rem;
+        width: 20%;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title__button {
+          display: inline-block;
+          min-width: 14px;
+          min-height: 14px;
+          background-color: var(--blue);
+          border-radius: 50%;
+        }
+
+        .title__text {
+          text-transform: uppercase;
+          font-family: var(--semiBold-font);
+          line-height: 1;
+        }
+      }
+
+      .about__content {
+        width: 65%;
+        display: grid;
+        gap: 2rem;
+
+        .a__text {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 0.7rem;
+          top: -10px;
+
+          p {
+            overflow: hidden;
+
+            span {
+              position: relative;
+              font-size: var(--h2-font-size);
+              line-height: 1.15;
+              top: -100%;
+              transition: top 0.5s linear;
+            }
+          }
+        }
+      }
+
+      .about__content2 {
+        width: 65%;
+        display: grid;
+        gap: 2rem;
+
+        .ac__top {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 2rem;
+        }
+
+        .ac__bottom {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.ac__container {
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
+
+  .ac__header {
+    color: var(--text-color-light);
+    line-height: 1;
+  }
+
+  .ac__content {
+    line-height: 1;
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1315px) {
+  .details__section {
+    .details__container {
+      .d__top {
+        .about__title {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  .details__section {
+    .details__container {
+      .d__top {
+        .about__title {
+          width: 30%;
+        }
+
+        .about__content {
+          .a__text {
+            p {
+              span {
+                font-size: calc(var(--h2-font-size) - 0.3rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .details__section {
+    .details__container {
+      .d__top {
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: flex-start;
+
+        .about__title {
+          width: 100%;
+        }
+
+        .about__content {
+          width: 100%;
+
+          .a__text {
+            p {
+              span {
+                font-size: calc(var(--h2-font-size) - 0.3rem);
+              }
+            }
+          }
+        }
+
+        .about__content2 {
+          width: 90%;
+
+          .ac__bottom {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .details__section {
+    .details__container {
+      .d__top {
+        .about__content {
+          .a__text {
+            p {
+              span {
+                font-size: calc(var(--h2-font-size) - 0.3rem);
+                line-height: 1.11;
+              }
+            }
+          }
+        }
+
+        .about__content2 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .details__section {
+    .details__container {
+      gap: 4rem;
+      
+      .d__top {
+        .about__content {
+          .a__text {
+            p {
+              span {
+                font-size: calc(var(--h2-font-size) - 0.5rem);
+              }
+            }
+          }
+        }
+
+        .about__content2 {
+          .ac__top {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .ac__container {
+    .ac__content {
+      line-height: 1.1;
+    }
+  }
+}

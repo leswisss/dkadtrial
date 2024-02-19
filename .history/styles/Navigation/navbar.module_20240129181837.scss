@@ -1,0 +1,24 @@
+.navigation{
+  height: var(--header-height);
+  width: 100%;
+}
+
+.navigation__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8rem;
+}
+
+.left__button{
+
+}

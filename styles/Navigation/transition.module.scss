@@ -1,0 +1,17 @@
+.transition{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blue);
+  position: fixed;
+  z-index: 21;
+  display: grid;
+  place-items: center;
+
+
+  .overflow{
+    span{
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+}

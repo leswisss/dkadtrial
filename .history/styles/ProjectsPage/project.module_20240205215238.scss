@@ -1,0 +1,19 @@
+.project__wrapper{
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .image__content{
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+
+    .image__overflow{
+      width: ;
+    }
+  }
+}

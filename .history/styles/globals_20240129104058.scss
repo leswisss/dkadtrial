@@ -1,0 +1,150 @@
+/*=============== VARIABLES SCSS ===============*/
+:root {
+  --header-height: 6rem;
+  --blue: #013cac;
+  --text-color: black;
+  --text-color-light: rgb(19, 19, 19);
+  --body-color: #ffffff;
+  --grey: #B7B9BB;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  // --body-font: 'Montserrat', sans-serif;
+
+  --biggest-font-size: 8rem;
+  --h1-font-size: 3.5rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .94rem;
+  --smaller-font-size: .863rem;
+  --tiny-font-size: 0.763rem;
+
+}
+
+/* Responsive typography */
+@media screen and (max-width: 1088px) {
+  :root {
+    --biggest-font-size: 7.2rem;
+    --h1-font-size: 3.15rem;
+    --h2-font-size: 2.75rem;
+    --h3-font-size: 1.8rem;
+    --normal-font-size: 0.98rem;
+    --small-font-size: .92rem;
+    --smaller-font-size: .83rem;
+    --tiny-font-size: 0.72rem;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  :root {
+    --biggest-font-size: 6rem;
+    --h1-font-size: 2.9rem;
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 0.94rem;
+    --small-font-size: 0.85rem;
+    --smaller-font-size: 0.79rem;
+    --tiny-font-size: 0.67rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+}
+
+
+html {
+  scroll-behavior: auto;
+  height: auto;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--montserrat-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-normal);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.special-container{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4rem 0 0rem;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+}

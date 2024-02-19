@@ -1,0 +1,222 @@
+.other__section {
+  width: 100%;
+  padding: 2rem 0 0 !important;
+
+  .other__container {
+    .other__header {
+      position: relative;
+      margin-bottom: 5rem;
+
+      .other__hero {
+        display: flex;
+        gap: 0.7rem;
+
+        p {
+          overflow: hidden;
+
+          span {
+            position: relative;
+            line-height: 1;
+            text-transform: capitalize;
+            top: -100%;
+            transition: top 0.5s linear;
+          }
+        }
+      }
+    }
+
+    .other__swiper {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      overflow: hidden;
+      position: relative;
+      margin-top: 5rem;
+
+      .swiper__buttons {
+        .swiper__button {
+          width: 60px;
+          height: 60px;
+          background-color: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(5px);
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          border-radius: 50%;
+          position: absolute;
+          top: 48%;
+          z-index: 10;
+          opacity: 1;
+          transition: opacity 0.7s ease;
+
+          svg {
+            font-size: calc(var(--h3-font-size) - 0.5rem);
+            color: white;
+          }
+
+          &:nth-of-type(1) {
+            left: 0;
+            transform: translate(0, -50%);
+          }
+
+          &:nth-of-type(2) {
+            right: 0;
+            transform: translate(0, -50%);
+          }
+        }
+      }
+
+      .other__slide {
+        .other__content {
+          display: block;
+          width: 350px;
+          aspect-ratio: 9/10;
+          position: relative;
+          color: black;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          &:hover {
+            .content__data {
+              top: 0px;
+            }
+          }
+
+          .other__image {
+            width: 100%;
+            height: 91%;
+            overflow: hidden;
+            position: relative;
+
+            .other__overflow {
+              width: 100%;
+              height: 100%;
+
+              .image__wrapper {
+                width: 100%;
+                height: 130%;
+                position: relative;
+
+                img {
+                  object-fit: cover;
+                  transition: all 0.7s ease;
+                }
+              }
+            }
+          }
+
+          .content__data {
+            width: 100%;
+            height: max-content;
+            position: relative;
+            top: 100px;
+            transition: top 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+
+            .data__content {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .left {
+                width: 80%;
+                overflow: hidden;
+                display: flex;
+                gap: 0.7rem;
+                justify-content: flex-start;
+                align-items: center;
+
+                .left__button {
+                  min-width: 0.85rem;
+                  min-height: 0.85rem;
+                  border-radius: 50%;
+                  border: 0.04rem solid black;
+                  position: relative;
+                  top: -1px;
+                }
+
+                .project__name {
+                  white-space: nowrap;
+                  line-height: 1.1;
+                  text-transform: capitalize;
+                }
+              }
+
+              .right {
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1024px) {
+  .other__section {
+    .other__container {
+      .other__header {
+        position: relative;
+        margin-bottom: 5rem;
+      }
+
+      .other__swiper {
+        .swiper__buttons {
+          .swiper__button {
+            width: 60px;
+            height: 60px;
+            top: 48%;
+          }
+        }
+
+        .other__slide {
+          .other__content {
+            width: 325px;
+
+            &:hover {
+              .content__data {
+                top: 0px;
+              }
+            }
+
+            .content__data {
+              top: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 660px) {
+  .other__section {
+    .other__container {
+      .other__header {
+        margin-bottom: 5rem;
+      }
+
+      .other__swiper {
+        .swiper__buttons {
+          .swiper__button {
+            display: none;
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .other__slide {
+          .other__content {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

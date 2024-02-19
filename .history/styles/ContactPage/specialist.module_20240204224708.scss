@@ -1,0 +1,30 @@
+.specialist__section{
+  padding: 4rem 5rem;
+  width: 100%;
+
+  .special__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left{
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      span{
+        display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: var(--blue);
+      border-radius: 50%;
+      }
+    }
+
+    .right{
+      width: 65%;
+    }
+  }
+}

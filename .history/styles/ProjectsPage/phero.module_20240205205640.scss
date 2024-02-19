@@ -1,0 +1,28 @@
+.projects__section{
+  width: 100%;
+  border-bottom: 0.04rem solid var(--text-color-light);
+
+  .projects__container{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: flex-start;
+
+    .filters{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+
+      .filter__container{
+        color: black;
+        padding: 0.7rem 4rem;
+        border: 0.04rem solid var(--text-color-light);
+        border-radius: 30px;
+        background-color: transparent;
+
+        .
+      }
+    }
+  }
+}

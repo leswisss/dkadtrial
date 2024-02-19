@@ -1,0 +1,150 @@
+.sidebar{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  color: var(--body-color);
+  z-index: 20;
+}
+
+.sidebar__container{
+  height: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__top{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close__text{
+  cursor: pointer;
+}
+
+.sidebar__content{
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .sc__left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .images{
+      width: 500px;
+      height: 320px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+
+      .image__wrapper{
+        width: 500px;
+        height: 320px;
+        position: relative;
+
+        img{
+          object-fit: cover;
+          opacity: 1;
+          transition: opacity 0.4s linear;
+        }
+      }
+    }
+
+    .text__container{
+      width: 500px;
+      height: max-content;
+      height: 32px;
+      overflow: hidden;
+
+      .text__slider{
+        will-change: transform;
+        display: flex;
+        flex-direction: column;
+
+        .slider__text{
+          font-size: calc(var(--h3-font-size) - 0.2rem);
+          font-family: var(--regular-font);
+        }
+      }
+    }
+
+  }
+
+  .sc__right{
+    width: 50%;
+    display: grid;
+    gap: 2rem;
+
+    .scr__links{
+      position: relative;
+      top: -1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      a{
+        font-size: var(--h2-font-size);
+        color: white;
+        padding: 0.5rem 0;
+        font-family: var(--regular-font);
+      }
+    }
+
+    .cta_button {
+      border-radius: 3em;
+      border: 0.01rem solid white;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 100px;
+      width: max-content;
+      
+      p {
+        position: relative;
+        z-index: 1;
+        transition: color 0.4s linear;
+        color: white;
+      }
+  
+      &:hover {
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.sidebar__bottom{
+  margin-top: auto;
+  padding: 1.2rem 0 0;
+  border-top: 0.04rem solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  .socials{
+    display: flex;
+    
+    gap: 2rem;
+  
+    a{
+      display: block;
+    }
+  }
+
+}

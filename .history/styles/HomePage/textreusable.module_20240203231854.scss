@@ -1,0 +1,11 @@
+.para {
+  overflow: hidden;
+
+  span {
+    position: relative;
+    line-height: 1;
+    text-transform: capitalize;
+    top: -100%;
+    transition: top 0.5s linear;
+  }
+}

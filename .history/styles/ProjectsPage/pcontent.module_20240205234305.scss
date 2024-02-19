@@ -1,0 +1,18 @@
+.content__section{
+  padding: 5rem 0;
+  width: 100%;
+
+  .content__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .content__wrapper{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 
+    }
+  }
+}

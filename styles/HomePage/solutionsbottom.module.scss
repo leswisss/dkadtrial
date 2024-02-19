@@ -1,0 +1,41 @@
+.solutions__content {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.desktop__bottom {
+  margin-top: 7rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .solutions__content {
+    .desktop {
+      .desktop__top {
+        width: 100%;
+        .body {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 1.5rem;
+          row-gap: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .solutions__content {
+    margin-top: 3.5rem;
+
+    .desktop {
+      .desktop__top {
+        .body {
+          grid-template-columns: repeat(1, 1fr);
+          column-gap: 1.5rem;
+          row-gap: 3rem;
+        }
+      }
+    }
+  }
+}

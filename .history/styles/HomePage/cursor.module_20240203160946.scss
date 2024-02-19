@@ -1,0 +1,54 @@
+.cursor {
+  width: 150px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background-color: var(--blue);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+
+
+  .cursor__content {
+    overflow: hidden;
+    width: max-content;
+    height: 22.4px;
+
+    .cursor__swiper {
+      display: grid;
+      place-items: center;
+      color: white;
+      width: max-content;
+      height: 100%;
+      transform: none;
+      will-change: transform;
+      transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+
+      .directives {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        align-items: center;
+        width: max-content;
+        min-height: 22.4px;
+
+        svg {
+          font-size: calc(var(--h3-font-size) - 0.6rem);
+          line-height: 1;
+        }
+
+        span{
+          line-height: 1.2;
+        }
+      }
+
+      span {
+        width: max-content;
+        min-height: 22.4px;
+        line-height: 1;
+        font-size: calc(var(--h3-font-size) - 0.8rem);
+      }
+    }
+  }
+}

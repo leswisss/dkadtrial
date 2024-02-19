@@ -1,0 +1,128 @@
+.footer__wrapper{
+  width: 100%;
+  font-family: var(--regular-font);
+  font-size: var(--small-font-size);
+}
+
+.footer{
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--body-color);
+}
+
+.footer__container{
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer__top{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ft__left{
+  display: flex;
+  gap: 10rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.ft__right{
+  .menu{
+    width: 400px;
+  }
+}
+
+.menu{
+  display: grid;
+  gap: 1rem;
+
+  .nav_header{
+    opacity: 0.7;
+    font-family: var(--medium-font);
+  }
+
+  .footer__links{
+    display: grid;
+    line-height: 23px;
+    gap: 0.6rem;
+
+    .footer__link{
+      color: white;
+    }
+  }
+}
+
+.socials{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  .social__link{
+    padding: 0.6rem 2.2rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: block;
+  }
+}
+
+.footer__image_wrapper{
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+
+  .footer__image_content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .footer__image{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img{
+        object-fit: cover;
+        filter: brightness(95%);
+      }
+    }
+
+    .footeri__container{
+      position: relative;
+      z-index: 1;
+      height: 100%;
+
+      h3{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: clamp(4rem, 7.7vw, 7.5rem);
+        color: white;
+        line-height: 7.7vw;
+        font-family: var(--regular-font);
+      }
+
+      .footer__footer{
+        po
+      }
+    }
+  }
+}
+

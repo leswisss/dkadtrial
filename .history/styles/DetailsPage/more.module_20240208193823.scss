@@ -1,0 +1,17 @@
+.more__section{
+  width: 100%;
+
+  .more__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .more__wrapper{
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+      
+    }
+  }
+}

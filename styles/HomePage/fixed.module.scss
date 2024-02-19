@@ -1,0 +1,181 @@
+.fixed {
+  width: 100%;
+  height: 37rem;
+  overflow: hidden;
+  position: relative;
+
+  .background__image {
+    width: 100vw;
+    height: 55rem;
+    position: absolute;
+    display: block;
+
+    img {
+      object-fit: cover;
+      filter: brightness(85%);
+    }
+  }
+
+  .fixed__container {
+    position: relative;
+    z-index: 1;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    color: white;
+
+    .text__overflow {
+      position: relative;
+      width: 60%;
+      display: flex;
+      column-gap: 0.7rem;
+      flex-wrap: wrap;
+
+      p {
+        overflow: hidden;
+
+        span {
+          position: relative;
+          font-size: calc(var(--biggest-font-size) - 3rem);
+          line-height: 1;
+          top: -100%;
+          transition: top 0.5s linear;
+        }
+      }
+    }
+
+    .text__content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.7rem;
+
+      .round {
+        min-width: 0.85rem;
+        min-height: 0.85rem;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      span {
+        line-height: 0.8;
+      }
+    }
+
+    .button {
+      margin-top: auto;
+      margin-left: auto;
+
+      .buttoner {
+        padding: 20px 80px 20px 80px;
+        border: 1px solid #cbcbcb;
+        cursor: pointer;
+        border-radius: 30px;
+
+        p {
+          position: relative;
+          z-index: 1;
+          transition: color 0.4s linear;
+          color: white;
+        }
+
+        &:hover {
+          p {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1088px) {
+  .fixed {
+    .fixed__container {
+      .text__overflow {
+        width: 80%;
+
+        p {
+          span {
+            font-size: calc(var(--biggest-font-size) - 3rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .fixed {
+    .fixed__container {
+      .text__overflow {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .fixed {
+    .fixed__container {
+      .text__overflow {
+        width: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .fixed {
+    .fixed__container {
+      .text__overflow {
+        width: 100%;
+      }
+
+      .text__content {
+        align-items: flex-start;
+        gap: 0.7rem;
+
+        .round {
+          position: relative;
+          top: 3px;
+        }
+
+        span {
+          line-height: 1.4;
+        }
+      }
+
+      .button {
+        margin-left: 0;
+        margin-right: auto;
+
+        .buttoner {
+          padding: 15px 60px 15px 60px;
+          border: 1px solid #cbcbcb;
+          cursor: pointer;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .fixed {
+    .fixed__container {
+      .text__overflow {
+        width: 100%;
+
+        p {
+          span {
+            font-size: calc(var(--biggest-font-size) - 3.4rem);
+          }
+        }
+      }
+    }
+  }
+}

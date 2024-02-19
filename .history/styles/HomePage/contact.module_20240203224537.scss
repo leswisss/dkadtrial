@@ -1,0 +1,47 @@
+.contact__section {
+  width: 100%;
+  background-color: var(--blue);
+  color: white;
+
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .contact__top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .top__one {
+        width: 35%;
+      }
+
+      .line {
+        width: 30%;
+        height: 1px;
+        background-color: rgb(226, 226, 226);
+      }
+
+      .top__two {
+        width: 35%;
+        position: relative;
+        transform: ;
+      }
+    }
+  }
+}
+
+.p__text {
+  font-size: var(--h1-font-size);
+  line-height: 1;
+
+  .text__fade {
+    opacity: 0.5;
+  }
+
+  &.align {
+    text-align: end;
+  }
+}

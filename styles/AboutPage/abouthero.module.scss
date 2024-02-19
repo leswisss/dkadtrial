@@ -1,0 +1,190 @@
+.hero__section {
+  width: 100%;
+
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .about__content_container {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      width: 100%;
+
+      .about__main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .about__title {
+          display: flex;
+          gap: 0.5rem;
+          width: 20%;
+          justify-content: flex-start;
+          align-items: center;
+
+          .title__button {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-color: var(--blue);
+            border-radius: 50%;
+          }
+
+          .title__text {
+            text-transform: uppercase;
+            font-family: var(--semiBold-font);
+            line-height: 1;
+          }
+        }
+
+        .about__content {
+          width: 65%;
+          display: grid;
+          gap: 3rem;
+
+          .content__one {
+            position: relative;
+            top: -8px;
+            display: flex;
+            column-gap: 0.7rem;
+            flex-wrap: wrap;
+
+            p {
+              overflow: hidden;
+
+              span {
+                position: relative;
+                font-size: var(--h2-font-size);
+                line-height: 1.15;
+                top: -100%;
+                transition: top 0.5s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.htext__main{
+  display: flex;
+  column-gap: 0.7rem;
+  flex-wrap: wrap;
+
+  .word__wrapper{
+    overflow: hidden;
+    display: block;
+
+    p{
+      display: block;
+      transform: translateY(-100%);
+    }
+  }
+}
+
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1150px) {
+  .hero__section {
+    .hero__container {
+      .about__content_container {
+        .about__main {
+          .about__title {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1088px) {
+  .hero__section {
+    .hero__container {
+      .about__content_container {
+        .about__main {
+          .about__content {
+            .content__one {
+              p {
+                span {
+                  font-size: calc(var(--h2-font-size) - 0.3rem);
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .hero__section {
+    .hero__container {
+      .about__content_container {
+        .about__main {
+          flex-direction: column;
+          gap: 3rem;
+          justify-content: flex-start;
+
+          .about__title {
+            width: 100%;
+          }
+
+          .about__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .hero__section {
+    .hero__container {
+      .about__content_container {
+        .about__main {
+          .about__content {
+            .content__one {
+              p {
+                span {
+                  line-height: 1.11;
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__section {
+    .hero__container {
+      .about__content_container {
+        .about__main {
+          .about__content {
+            .content__one {
+              p {
+                span {
+                  font-size: calc(var(--h2-font-size) - 0.5rem);
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}

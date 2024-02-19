@@ -1,0 +1,116 @@
+.images__section {
+  margin: 2rem 0 5rem;
+  width: 100%;
+  aspect-ratio: 16/8;
+  position: relative;
+
+  .images__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    .image__wrapper {
+      width: 100%;
+      height: 130%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
+
+      &.first__background {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .image__selector {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    z-index: 2;
+
+    .selector {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .mobile__indicator {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    display: none;
+
+    span {
+      padding: 0.5rem 1.2rem;
+      background-color: var(--blue);
+      border-radius: 30px;
+      color: white;
+    }
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1150px) {
+  .images__section {
+    aspect-ratio: 16/9;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .images__section {
+    aspect-ratio: 16/9.5;
+
+    .images__wrapper {
+      .image__wrapper {
+        height: 135%;
+      }
+    }
+
+    .mobile__indicator {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .images__section {
+    aspect-ratio: 16/9.5;
+
+    .mobile__indicator {
+      bottom: 25px;
+      right: 25px;
+      span {
+        padding: 0.4rem 1.2rem;
+        font-size: var(--small-font-size);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .images__section {
+    margin: 1rem 0 5rem;
+    aspect-ratio: 16/10.5;
+
+    .mobile__indicator {
+      bottom: 20px;
+      right: 20px;
+      span {
+        padding: 0.35rem 1.1rem;
+        font-size: var(--smaller-font-size);
+      }
+    }
+  }
+}

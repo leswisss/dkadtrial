@@ -1,0 +1,57 @@
+.project__wrapper{
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .image__content{
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+
+    .image__overflow{
+      width: 100%;
+      height: 130%;
+      position: relative;
+
+      img{
+        object-fit: cover;
+      }
+    }
+
+    .image__overlay{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+
+      .p__services{
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        column-gap: 0.5rem;
+        row-gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        span{
+          font-size: var(--smaller-font-size);
+          color: white;
+          padding: 0.6rem 3.5rem;
+          border: 0.04rem solid rgb(190, 190, 190);
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}

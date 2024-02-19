@@ -1,0 +1,29 @@
+.solution__container{
+  width: 100%;
+  padding: 3rem 0;
+  border-top: 1px solid var(--text-color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .solution__left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3rem;
+
+    .solution__index{
+      width: 50px;
+
+      span{
+        display: block;
+        font-size: var(--h3-font-size);
+        line-height: 0.8;
+      }
+    }
+
+    .solution__title{
+      font-size: var(--);
+    }
+  }
+}

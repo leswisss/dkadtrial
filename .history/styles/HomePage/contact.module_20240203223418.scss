@@ -1,0 +1,20 @@
+.contact__section{
+  width: 100%;
+  background-color: var(--blue);
+  color: white;
+
+  .contact__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .contact__top{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      
+    }
+  }
+}

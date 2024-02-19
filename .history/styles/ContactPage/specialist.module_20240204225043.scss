@@ -1,0 +1,43 @@
+.specialist__section {
+  padding: 4rem 0 5rem;
+  width: 100%;
+  color: white;
+  background-color: var(--blue);
+
+  .special__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+
+      span {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-family: var(--semiBold-font);
+        line-height: 1;
+      }
+    }
+
+    .right {
+      width: 65%;
+      d
+
+      p{
+        font-size: var(--h2-font-size);
+      }
+    }
+  }
+}

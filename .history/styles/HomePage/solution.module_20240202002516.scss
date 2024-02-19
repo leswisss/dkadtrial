@@ -1,0 +1,13 @@
+.solution__container{
+  width: 100%;
+  padding: 3rem 0;
+  border-top: 1px solid var(--text-color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .solution__left{
+    display: flex;
+    gap: 3rem;
+  }
+}

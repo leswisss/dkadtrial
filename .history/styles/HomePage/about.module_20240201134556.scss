@@ -1,0 +1,16 @@
+.about__section{
+  padding: 7rem 0 5rem;
+
+  .about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.about__main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 2rem;
+}

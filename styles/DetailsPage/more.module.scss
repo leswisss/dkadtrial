@@ -1,0 +1,129 @@
+.more__section {
+  width: 100%;
+
+  .more__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .more__wrapper {
+      width: 100%;
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        .more__overlay {
+          opacity: 1;
+        }
+      }
+
+      .more__image {
+        width: 100%;
+        height: 135%;
+        position: relative;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .more__overlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+
+        .overlay__content {
+          margin-top: auto;
+          width: 80%;
+
+          p {
+            color: white;
+            line-height: 1.1;
+            font-size: var(--small-font-size);
+          }
+        }
+      }
+    }
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1024px) {
+  .more__section {
+    .more__container {
+      grid-template-columns: repeat(2, 1fr);
+
+      .more__wrapper {
+        aspect-ratio: 16/10;
+
+        .more__overlay {
+          padding: 1rem;
+
+          .overlay__content {
+            width: 100%;
+
+            p {
+              font-size: var(--smaller-font-size);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .more__section {
+    .more__container {
+      grid-template-columns: repeat(1, 1fr);
+
+      .more__wrapper {
+        aspect-ratio: 16/9;
+
+        .more__overlay {
+          padding: 1.5rem 1rem;
+
+          .overlay__content {
+            width: 100%;
+
+            p {
+              font-size: var(--small-font-size);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .more__section {
+    .more__container {
+      gap: 0.8rem;
+      
+      .more__wrapper {
+        aspect-ratio: 16/10.5;
+
+        .more__overlay {
+          padding: 1rem;
+
+          .overlay__content {
+            p {
+              font-size: var(--smaller-font-size);
+            }
+          }
+        }
+      }
+    }
+  }
+}

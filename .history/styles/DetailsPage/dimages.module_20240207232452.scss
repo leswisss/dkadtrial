@@ -1,0 +1,25 @@
+.images__section {
+  padding: 2rem 0 5rem;
+  width: 100%;
+  height: 110vh;
+  position: relative;
+
+  .images__wrapper {
+    width: 100%;
+    height: 110vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    .image__wrapper {
+      width: 100%;
+      height: 120vh;
+      position: relative;
+
+      img{
+        object-fit: cover;
+      }
+    }
+  }
+}

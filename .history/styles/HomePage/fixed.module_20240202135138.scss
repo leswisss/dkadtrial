@@ -1,0 +1,17 @@
+.fixed{
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+
+  .background__image{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    le
+
+    img{
+      object-fit: cover;
+    }
+  }
+}

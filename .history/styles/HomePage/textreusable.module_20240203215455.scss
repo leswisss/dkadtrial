@@ -1,0 +1,12 @@
+.para {
+  overflow: hidden;
+
+  span {
+    position: relative;
+    font-size: calc(var(--biggest-font-size) - 3rem);
+    line-height: 1;
+    text-transform: capitalize;
+    top: -100%;
+    transition: top 0.7s linear;
+  }
+}
