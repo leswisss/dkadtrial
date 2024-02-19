@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import gsap from "gsap";
 import Image from "next/image";
 import { Rounded } from "..";
 import { valuesAnim } from "@/animations";
@@ -143,7 +144,6 @@ const AboutMission = () => {
     return body;
   };
 
-
   const progressWrapperRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const { ref: ref, inView: inView } = useInView({
@@ -164,83 +164,121 @@ const AboutMission = () => {
         </motion.div>
       </div>
       <div className={`container ${styles.mission__container}`}>
-        <div className={styles.mission} ref={ref} style={{clipPath: inView ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: "clip-path 1s cubic-bezier(0.7, 0, 0.3, 1)"}}>
-          <div className={styles.mission__wrapper} style={{opacity: inView ? 1 : 0, transition: "opacity 0.5s ease", transitionDelay: "1s"}}>
-            <div className={styles.mission__content}>
-              <span className={styles.m__header}>
-                {t("AboutPage:ourmission")}
-              </span>
-              <div className={styles.p__tags}>
-                <p>{t("AboutPage:mission")}</p>
-                <p>{t("AboutPage:mission2")}</p>
-              </div>
-              <div className={styles.rounded}>
-                <Rounded
-                  backgroundColor="#013cac"
-                  linker
-                  link={currentLocale === "en" ? "/en/projects" : "/fr/projets"}
-                  classNames={styles.rounded__button}
-                >
-                  <p>{t("AboutPage:cta")}</p>
-                </Rounded>
+        <div className={styles.mission} ref={ref}>
+          <div
+            className={styles.mission__wrapper__wrapper}
+            style={{
+              clipPath: inView
+                ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+                : "polygon(0 0, 100% 0, 100% 0, 0 0)",
+              transition: "clip-path 1s cubic-bezier(0.7, 0, 0.3, 1)",
+            }}
+          >
+            <div
+              className={styles.mission__wrapper}
+              style={{
+                opacity: inView ? 1 : 0,
+                transition: "opacity 0.5s ease",
+                transitionDelay: "1s",
+              }}
+            >
+              <div className={styles.mission__content}>
+                <span className={styles.m__header}>
+                  {t("AboutPage:ourmission")}
+                </span>
+                <div className={styles.p__tags}>
+                  <p>{t("AboutPage:mission")}</p>
+                  <p>{t("AboutPage:mission2")}</p>
+                </div>
+                <div className={styles.rounded}>
+                  <Rounded
+                    backgroundColor="#013cac"
+                    linker
+                    link={
+                      currentLocale === "en" ? "/en/projects" : "/fr/projets"
+                    }
+                    classNames={styles.rounded__button}
+                  >
+                    <p>{t("AboutPage:cta")}</p>
+                  </Rounded>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.values} ref={ref2} style={{clipPath: inView2 ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: "clip-path 1s cubic-bezier(0.7, 0, 0.3, 1)"}}>
-          <div className={styles.values__wrapper}>
-            <div className={styles.values__content} style={{opacity: inView2 ? 1 : 0, transition: "opacity 0.5s ease", transitionDelay: "1s"}}>
-              <span className={styles.h__text}>{t("AboutPage:ourvalues")}</span>
-              <div className={styles.v__content}>
-                <div className={styles.v__header}>
-                  {ValuesData.map((data, i) => (
-                    <div className={styles.v__headerr} key={i}>
-                      {splitwordSpecial(data.name, i)}
-                    </div>
-                  ))}
-                </div>
-                <div className={styles.p__text}>
-                  {ValuesData.map((data, i) => (
-                    <div className={styles.pp__text}>
-                      {splitwordSpecial(data.text, i)}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.buttons}>
-                {ValuesData.map((data, i) => (
-                  <div
-                    className={styles.progress__wrapper}
-                    key={i}
-                    onClick={() => handleButtonClick(i)}
-                    ref={(el) => (progressWrapperRefs.current[i] = el)}
-                  ></div>
-                ))}
-                <div
-                  className={styles.progress}
-                  style={{
-                    transform: `translateX(calc(${activeSlide}*100% + ${
-                      (activeSlide * gapper) / 16
-                    }rem))`,
-                  }}
-                ></div>
-              </div>
-            </div>
-            <div className={styles.values__images}>
+        <div className={styles.values} ref={ref2}>
+          <div
+            className={styles.values__wrapper__wrapper}
+            style={{
+              clipPath: inView2
+                ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+                : "polygon(0 0, 100% 0, 100% 0, 0 0)",
+              transition: "clip-path 1s cubic-bezier(0.7, 0, 0.3, 1)",
+            }}
+          >
+            <div className={styles.values__wrapper}>
               <div
-                className={styles.images__slider}
-                style={{ transform: `translateX(${-activeSlide * 100}%)` }}
+                className={styles.values__content}
+                style={{
+                  opacity: inView2 ? 1 : 0,
+                  transition: "opacity 0.5s ease",
+                  transitionDelay: "1s",
+                }}
               >
-                {ValuesData.map((data, i) => (
-                  <div className={styles.image} key={i}>
-                    <Image
-                      src={data.image}
-                      fill
-                      quality={100}
-                      alt="Project Image"
-                    />
+                <span className={styles.h__text}>
+                  {t("AboutPage:ourvalues")}
+                </span>
+                <div className={styles.v__content}>
+                  <div className={styles.v__header}>
+                    {ValuesData.map((data, i) => (
+                      <div className={styles.v__headerr} key={i}>
+                        {splitwordSpecial(data.name, i)}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                  <div className={styles.p__text}>
+                    {ValuesData.map((data, i) => (
+                      <div className={styles.pp__text}>
+                        {splitwordSpecial(data.text, i)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className={styles.buttons}>
+                  {ValuesData.map((data, i) => (
+                    <div
+                      className={styles.progress__wrapper}
+                      key={i}
+                      onClick={() => handleButtonClick(i)}
+                      ref={(el) => (progressWrapperRefs.current[i] = el)}
+                    ></div>
+                  ))}
+                  <div
+                    className={styles.progress}
+                    style={{
+                      transform: `translateX(calc(${activeSlide}*100% + ${
+                        (activeSlide * gapper) / 16
+                      }rem))`,
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className={styles.values__images}>
+                <div
+                  className={styles.images__slider}
+                  style={{ transform: `translateX(${-activeSlide * 100}%)` }}
+                >
+                  {ValuesData.map((data, i) => (
+                    <div className={styles.image} key={i}>
+                      <Image
+                        src={data.image}
+                        fill
+                        quality={100}
+                        alt="Project Image"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
