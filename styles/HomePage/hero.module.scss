@@ -19,7 +19,7 @@
       img {
         object-fit: cover;
         object-position: 0% 50%;
-        filter: brightness(75%);
+        filter: brightness(80%);
       }
     }
   }
@@ -173,6 +173,13 @@
 
 @media screen and (max-width: 600px) {
   .hero__section {
+    .image__wrapper {
+      .himage__fill {
+        img {
+          filter: brightness(90%);
+        }
+      }
+    }
     .hero__container {
       .hero__text {
         width: 31rem;
