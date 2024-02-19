@@ -168,7 +168,7 @@ const ProjectsBottom = () => {
                   <Rounded
                     backgroundColor="#ffffff"
                     classNames={styles.rounded__button}
-                    link="/"
+                    link={currentlocale==="fr" ? '/fr/projets/sunset-sanctuary' : "/en/projects/sunset-sanctuary"}
                     linker
                   >
                     <p>{t("HomePage:thisproject")}</p>
