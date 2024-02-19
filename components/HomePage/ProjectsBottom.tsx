@@ -188,7 +188,7 @@ const ProjectsBottom = () => {
               }}
             ></div>
             <Link
-              href="/"
+              href={currentlocale==="fr" ? '/fr/projets/sunset-sanctuary' : "/en/projects/sunset-sanctuary"}
               onMouseEnter={() => {
                 setCursor({ active: true, index: 1 });
               }}
