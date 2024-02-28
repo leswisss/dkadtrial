@@ -18,7 +18,7 @@
 
       img {
         object-fit: cover;
-        object-position: 0% 50%;
+        object-position: 0% 70%;
         filter: brightness(80%);
       }
     }
@@ -165,6 +165,7 @@
       .himage__fill {
         img {
           object-fit: cover;
+          filter: brightness(70%);
         }
       }
     }
@@ -173,13 +174,6 @@
 
 @media screen and (max-width: 600px) {
   .hero__section {
-    .image__wrapper {
-      .himage__fill {
-        img {
-          filter: brightness(90%);
-        }
-      }
-    }
     .hero__container {
       .hero__text {
         width: 31rem;

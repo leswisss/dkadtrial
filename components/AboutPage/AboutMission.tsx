@@ -256,9 +256,13 @@ const AboutMission = () => {
                   <div
                     className={styles.progress}
                     style={{
-                      transform: `translateX(calc(${activeSlide}*100% + ${
-                        (activeSlide * gapper) / 16
-                      }rem))`,
+                      transform: activeSlide === 4 ? `translateX(calc(${activeSlide}*100% + ${
+                        (activeSlide * gapper * 1.07)
+                      }px))` : activeSlide === 3 || activeSlide === 2 ? `translateX(calc(${activeSlide}*100% + ${
+                        (activeSlide * gapper * 1.055)
+                      }px))` : `translateX(calc(${activeSlide}*100% + ${
+                        (activeSlide * gapper)
+                      }px))`,
                     }}
                   ></div>
                 </div>

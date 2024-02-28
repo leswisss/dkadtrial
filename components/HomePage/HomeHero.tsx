@@ -6,9 +6,9 @@ import gsap from "gsap";
 import Lenis from "@studio-freight/lenis/types";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import IMAGE from "../../public/images/homehero2.jpg";
-import IMAGE2 from "../../public/images/homehero2medium.jpg";
-import IMAGE3 from "../../public/images/homehero2mobile.jpg";
+import IMAGE from "../../public/images/homehero.jpg";
+import IMAGE2 from "../../public/images/homeheromedium.jpg";
+import IMAGE3 from "../../public/images/homeheromobile.jpg";
 import styles from "../../styles/HomePage/hero.module.scss";
 
 const HomeHero = ({
