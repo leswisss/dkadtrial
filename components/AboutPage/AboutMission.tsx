@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import gsap from "gsap";
 import Image from "next/image";
 import { Rounded } from "..";
 import { valuesAnim } from "@/animations";
@@ -156,6 +155,28 @@ const AboutMission = () => {
     triggerOnce: true,
   });
 
+
+  //CHECK IF SCREEN WIDTH IS LESS THAN 380PX
+  const [active390, setActive390] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined' && window.innerWidth < 380 && currentLocale==='en') {
+        setActive390(true)
+      } else {
+        setActive390(false)
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [currentLocale])
+
   return (
     <section className={`${styles.mission__section}`}>
       <div className={styles.image__overflow} ref={container}>
@@ -164,7 +185,7 @@ const AboutMission = () => {
         </motion.div>
       </div>
       <div className={`container ${styles.mission__container}`}>
-        <div className={styles.mission} ref={ref}>
+        <div className={`${styles.mission} ${active390 ? styles.width380 : ""}`} ref={ref}>
           <div
             className={styles.mission__wrapper__wrapper}
             style={{

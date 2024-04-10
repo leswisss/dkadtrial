@@ -211,7 +211,7 @@ const ProjectsBottom = () => {
           <div className={styles.bottom__button}>
             <Rounded
               linker
-              link={`/${currentlocale}/projects`}
+              link={currentlocale === "en" ? `/en/projects` : `/fr/projets`}
               backgroundColor="#013cac"
               classNames={styles.rounded__button}
             >
