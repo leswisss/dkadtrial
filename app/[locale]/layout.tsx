@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import initTranslations from "../i18n";
 import { Footer } from "@/components";
 import TranslationsProvider from "@/utils/TranslationsProvider";
+import { Analytics } from "@vercel/analytics/react"
 import "../../styles/globals.scss"
 
 const light = localFont({
@@ -89,6 +90,7 @@ export default async function RootLayout({
           {children}
           <Footer/>
         </TranslationsProvider>
+        <Analytics />
       </body>
     </html>
   );
