@@ -89,8 +89,8 @@ const FixedReusable = ({ linker, data }: { linker: boolean, data: dataInterface 
             <p>{data.linktext}</p>
           </Rounded>
           ) : (
-            <Rounded backgroundColor="#ffffff" classNames={styles.buttoner} linker={false}>
-              <p onClick={() => setActiveModal(true)}>{data.title}</p>
+            <Rounded backgroundColor="#ffffff" classNames={styles.buttoner} linker={false} onClick={() => setActiveModal(true)}>
+              <p>{data.title}</p>
             </Rounded>
           )}
         </div>

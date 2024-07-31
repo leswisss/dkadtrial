@@ -2,17 +2,12 @@
 
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { ProjectProps } from "@/types";
 import { useInView } from "react-intersection-observer";
 import styles from "../../styles/DetailsPage/details.module.scss";
 
-const DetailsDetails = () => {
+const DetailsDetails = ({currentProject, currentLocale}: {currentProject: ProjectProps | null | undefined ; currentLocale: string}) => {
   const { t, i18n } = useTranslation();
-
-  const firstPhrase =
-    "Sunset Sanctuary Retreat est un témoignage de l'innovation architecturale et de la conception durable. Nichée au cœur de la nature, cette structure à deux niveaux est dotée de grandes baies vitrées qui offrent aux résidents une vue imprenable sur la verdure environnante. Le niveau supérieur, caractérisé par des lattes de bois, ajoute un élément d'intimité tout en rehaussant l'attrait esthétique.";
-
-  const secondPhrase =
-    "Le garage ouvert au rez-de-chaussée offre une commodité sans compromis sur le design. L'utilisation de matériaux durables et l'intégration transparente dans l'environnement soulignent notre engagement en faveur d'un mode de vie respectueux de l'environnement.";
 
   const splitwords = (phrase: string, condition: boolean) => {
     let body: JSX.Element[] = [];
@@ -27,7 +22,11 @@ const DetailsDetails = () => {
     return body;
   };
 
-  const phrases = [firstPhrase, secondPhrase];
+  const phrases = currentProject && currentLocale === "en" ? currentProject.aboutProject.en : currentProject && currentLocale === "fr" ? currentProject.aboutProject.fr : null
+  const archiStyle = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.style : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.style : null;
+  const archiEnvironment = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.environment : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.environment : null;
+  const archiFeatures = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.features : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.features : null;
+
 
   return (
     <section className={`section ${styles.details__section}`}>
@@ -38,7 +37,7 @@ const DetailsDetails = () => {
             <span className={styles.title__text}>{t("DetailsPage:about")}</span>
           </div>
           <div className={styles.about__content}>
-            {phrases.map((data, i) => {
+            {phrases?.map((data, i) => {
               const { ref, inView } = useInView({
                 threshold: 0.2,
                 triggerOnce: true,
@@ -60,14 +59,14 @@ const DetailsDetails = () => {
                 <p className={styles.ac__header}>
                   {t("DetailsPage:architecture")}
                 </p>
-                <p className={styles.ac__content}>Moderne, Écologique</p>
+                <p className={styles.ac__content}>{archiStyle}</p>
               </div>
               <div className={styles.ac__container}>
                 <p className={styles.ac__header}>
                   {t("DetailsPage:environment")}
                 </p>
                 <p className={styles.ac__content}>
-                  Verdure luxuriante, Paysages sereins
+                  {archiEnvironment}
                 </p>
               </div>
             </div>
@@ -77,8 +76,7 @@ const DetailsDetails = () => {
                   {t("DetailsPage:characteristics")}
                 </p>
                 <p className={styles.ac__content}>
-                  Grandes baies vitrées, Lamelles en bois à l'étage, Garage
-                  ouvert
+                  {archiFeatures}
                 </p>
               </div>
             </div>

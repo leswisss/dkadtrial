@@ -85,6 +85,7 @@ export default function Rounded({
           onMouseLeave={() => {
             manageMouseLeave();
           }}
+          onClick={onClick}
           {...attributes}
         >
           {children}

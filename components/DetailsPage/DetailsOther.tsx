@@ -7,15 +7,27 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { TitleReusable } from "..";
-import { MoreProjects, swiperSettings } from "@/utils";
+import {swiperSettings, ProjectsContent} from "@/utils";
+import { ProjectProps } from "@/types";
 import { useTranslation } from "react-i18next";
 import styles from "../../styles/DetailsPage/other.module.scss";
 
 // Import Swiper styles
 import "swiper/css";
 
-const DetailsOther = () => {
-  const projectName = "Sunset Sanctuary Retreat";
+const DetailsOther = ({currentProject, currentLocale}: {currentProject: ProjectProps | undefined | null; currentLocale: string }) => {
+  const projectName = currentProject ? currentProject.name : "";
+  
+  //Function to get other Projects
+  const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
+    const currentList = name ? list.filter(project => project.name !== name) : []
+    const returnedList = currentList ? currentList.sort((a, b) => b.year - a.year) : []
+
+    return returnedList
+  }
+
+  const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
+
   const {t, i18n} = useTranslation();
 
   const [offset, setOffset] = useState(0);
@@ -70,7 +82,7 @@ const DetailsOther = () => {
           }}
         >
           <SwiperButtons />
-          {MoreProjects.map((data, i) => {
+          {otherProjects.map((data, i) => {
             const container = useRef(null);
             const { scrollYProgress } = useScroll({
               target: container,
@@ -84,7 +96,7 @@ const DetailsOther = () => {
               <SwiperSlide className={styles.other__slide} key={i}>
                 <Link
                   className={styles.other__content}
-                  href="/"
+                  href={currentLocale === "en" ? `/en/projects/${data?.slug}` : `/fr/projets/${data?.slug}`}
                   onMouseEnter={() => setActive(true)}
                   onMouseLeave={() => setActive(false)}
                 >
@@ -99,10 +111,10 @@ const DetailsOther = () => {
                         style={{ y }}
                       >
                         <Image
-                          src={data.image}
+                          src={data.images[0].image}
                           fill
                           quality={100}
-                          alt="Project Image"
+                          alt= {projectName}
                           style={{ objectPosition: `${offset}% center` }}
                         />
                       </motion.div>

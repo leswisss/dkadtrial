@@ -31,7 +31,10 @@ const ProjectsHero = ({
   const filters = [
     {
       name: "Tous",
-      param: "",
+      param: {
+        en: "",
+        fr: "",
+      },
       link:
         currentLocale === "en"
           ? `/${currentLocale}/projects`
@@ -39,7 +42,10 @@ const ProjectsHero = ({
     },
     {
       name: "Intérieur",
-      param: "interior",
+      param: {
+        en: "interior",
+        fr: "intérieur",
+      },
       link:
         currentLocale === "en"
           ? `/${currentLocale}/projects?service=interior`
@@ -47,19 +53,25 @@ const ProjectsHero = ({
     },
     {
       name: "Extérieur",
-      param: "exterior",
+      param: {
+        en: "exterior",
+        fr: "extérieur",
+      },
       link:
         currentLocale === "en"
           ? `/${currentLocale}/projects?service=exterior`
-          : `/${currentLocale}/projects?service=extérieur`,
+          : `/${currentLocale}/projets?service=extérieur`,
     },
     {
       name: "Aménagement Paysager",
-      param: "landscaping",
+      param: {
+        en: "landscaping",
+        fr: "aménagement-paysager",
+      },
       link:
         currentLocale === "en"
           ? `/${currentLocale}/projects?service=landscaping`
-          : `/${currentLocale}/projects?service=aménagement-paysager`,
+          : `/${currentLocale}/projets?service=aménagement-paysager`,
     },
   ];
 
@@ -110,11 +122,15 @@ const ProjectsHero = ({
         "<+0.8"
       );
 
-      tl.to(lineRef.current, {
-        width: "100%",
-        ease: "power4.inOut",
-        duration: 2,
-      }, ">");
+      tl.to(
+        lineRef.current,
+        {
+          width: "100%",
+          ease: "power4.inOut",
+          duration: 2,
+        },
+        ">"
+      );
 
       tl.pause();
 
@@ -140,8 +156,13 @@ const ProjectsHero = ({
               <Link
                 href={data.link}
                 className={`${styles.filter__container} ${
-                  (!serviceParam && data.param === "") ||
-                  serviceParam === data.param
+                  currentLocale === "en"
+                    ? (!serviceParam && data.param.en === "") ||
+                      serviceParam === data.param.en
+                      ? styles.active
+                      : ""
+                    : (!serviceParam && data.param.fr === "") ||
+                      serviceParam === data.param.fr
                     ? styles.active
                     : ""
                 }`}

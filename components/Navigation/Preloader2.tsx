@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import { ProjectsContent } from "@/utils";
 import gsap from "gsap";
 import { AnimatedPhrase } from "..";
 import styles from "../../styles/Navigation/preloader.module.scss";
@@ -30,23 +31,47 @@ const Preloader2 = ({
   const contact = t("Navigation:contacter");
   const error = t("Navigation:error");
 
-  const pageName =
-    currentPathname === "/en" || currentPathname === "/fr"
-      ? home
-      : currentPathname === "/en/projects" || currentPathname === "/fr/projets"
-      ? project
-      : currentPathname === "/fr/a-propos" || currentPathname === "/en/about"
-      ? about
-      : currentPathname === "/fr/services" || currentPathname === "/en/services"
-      ? services
-      : currentPathname === "/fr/contact" || currentPathname === "/en/contact"
-      ? contact
-      : (currentPathname.includes("/fr/projets/") &&
-          currentPathname !== "/fr/projets") ||
-        (currentPathname.includes("/en/projects/") &&
-          currentPathname !== "/en/projects")
-      ? details
-      : error;
+  //Get Page Name
+  const [pageName, setPageName] = useState("");
+
+  // Extract the project slug from the URL
+  const parameters = useParams();
+  const slugg = parameters.project;
+
+  useEffect(() => {
+    const determinePageName = () => {
+      if (currentPathname === "/en" || currentPathname === "/fr") {
+        setPageName(home);
+      } else if (
+        ["/en/projects", "/fr/projets", "/en/projects?service=interior", "/fr/projets?service=intérieur", "/en/projects?service=exterior", "/fr/projets?service=extérieur", "/en/projects?service=lansdcaping", "/fr/projets?service=aménagement-paysager"].includes(currentPathname)
+      ) {
+        setPageName(project);
+      } else if (currentPathname === "/fr/a-propos" || currentPathname === "/en/about") {
+        setPageName(about);
+      } else if (currentPathname === "/fr/services" || currentPathname === "/en/services") {
+        setPageName(services);
+      } else if (currentPathname === "/fr/contact" || currentPathname === "/en/contact") {
+        setPageName(contact);
+      } else if (
+        (currentPathname.includes("/fr/projets/") && currentPathname !== "/fr/projets") ||
+        (currentPathname.includes("/en/projects/") && currentPathname !== "/en/projects")
+      ) {
+      
+        // Validate if the project exists
+        const projectData = ProjectsContent.find(project => project.slug === slugg);
+        if (projectData) {
+          setPageName(projectData.name);
+        } else {
+          setPageName(error);
+        }
+      } else {
+        setPageName(error);
+      }
+    };
+
+    determinePageName();
+  }, [currentPathname]);
+
 
   const refs = useRef<HTMLSpanElement[]>([]);
   const preloaderRef = useRef(null);

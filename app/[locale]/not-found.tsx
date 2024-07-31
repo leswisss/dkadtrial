@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import Image from "next/image";
 import { Rounded, Preloader2 } from "@/components";
-import IMAGE from "../../public/images/landscape.jpg";
+import Lenis from "@studio-freight/lenis";
+import IMAGE from "../../public/images/broken.jpg";
 
 import styles from "../../styles/notfound.module.scss";
 
@@ -205,6 +206,20 @@ const NotFoundPage = () => {
       tl.kill();
     };
   }, [animationFinished]);
+
+  //SmoothScroll
+  useEffect(() => {
+    const lenisInstance = new Lenis({
+      duration: 2,
+    });
+
+    function raf(time: number) {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <div className="main">

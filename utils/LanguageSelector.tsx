@@ -20,8 +20,6 @@ export default function LanguageSelector({ setLocalState }: TransitionProps) {
 
   const handleChange = (newLocale: string) => {
     // set cookie for next-i18n-router
-
-
     setLocalState("Translating State");
 
     const days = 30;

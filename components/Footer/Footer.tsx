@@ -11,6 +11,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import IMAGE from "../../public/images/businesscard.jpg";
+import IMAGE3 from "../../public/images/bettermarque.jpg"
 import styles from "../../styles/Footer/footer.module.scss";
 import { Icon } from "@iconify/react";
 
@@ -292,7 +293,7 @@ const Footer = () => {
               >
                 <div className={styles.b__image}>
                   <Image
-                    src={IMAGE}
+                    src={IMAGE3}
                     fill
                     quality={100}
                     alt="Better Marque"

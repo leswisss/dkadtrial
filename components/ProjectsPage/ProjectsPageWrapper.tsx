@@ -61,7 +61,7 @@ const ProjectsPageWrapper = () => {
       <Navbar lang={currentlocale} animationFinished={animationFinished} setLocalState={setLocalState}/>
       <ProjectsHero setImageLoaded={setImageLoaded}
         animationFinished={animationFinished} />
-      <ProjectContent cta={t("ProjectsPage:ctabutton")} animationFinished={animationFinished}/>
+      <ProjectContent cta={t("ProjectsPage:ctabutton")} animationFinished={animationFinished} currentLocale={currentlocale}/>
       <FooterReusable data={footerData}/>
     </>
   )

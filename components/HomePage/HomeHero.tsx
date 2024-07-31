@@ -68,7 +68,7 @@ const HomeHero = ({
     const handleResize = () => {
       if (typeof window !== "undefined" && window.innerWidth < 550) {
         setImage(IMAGE3);
-      } else if (typeof window !== "undefined" && window.innerWidth < 950) {
+      } else if (typeof window !== "undefined" && window.innerWidth < 900) {
         setImage(IMAGE2);
       } else {
         setImage(IMAGE);

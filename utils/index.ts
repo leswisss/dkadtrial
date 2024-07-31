@@ -10,9 +10,10 @@ import IMAGE9 from "../public/images/project2.jpg";
 import IMAGE10 from "../public/images/project3.jpg";
 import IMAGE11 from "../public/images/project4.jpg";
 import IMAGE12 from "../public/images/project5.jpg";
+import IMAGE13 from "../public/images/project6.jpg";
 import IMAGE14 from "../public/images/project7.png";
-import IMAGE15 from "../public/images/services.jpg"
-
+import IMAGE16 from "../public/images/project8.png";
+import IMAGE15 from "../public/images/services.jpg";
 
 export const NavMenu = [
   {
@@ -103,166 +104,367 @@ export const FooterLinks = [
 export const ProjectsContent = [
   {
     id: 1,
+    slug: "sunset-sanctuary-retreat",
     name: "Sunset Sanctuary Retreat",
-    image: IMAGE8,
-    image2: IMAGE9,
-    services: ["Interieur", "Exterieur", "Supervision", "Amenagement Paysager"],
-    location: "Douala, Cameroon",
+    year: 2023,
+    images: [
+      {
+        image: IMAGE8,
+        description: {
+          en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+          fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+        },
+      },
+      {
+        image: IMAGE9,
+        description: {
+          en: "Elegant residential architecture highlighting simplicity, functionality, and harmony with nature, enhancing the living experience.",
+          fr: "Architecture résidentielle élégante soulignant la simplicité, la fonctionnalité et l'harmonie avec la nature, améliorant l'expérience de vie.",
+        },
+      },
+      {
+        image: IMAGE10,
+        description: {
+          en: "A modern, stylish living room with a white sofa, wooden coffee table, and large windows.",
+          fr: "Un salon moderne et élégant avec un canapé blanc, une table basse en bois et de grandes fenêtres.",
+        },
+      },
+      {
+        image: IMAGE11,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE12,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE14,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+    ],
+    services: {
+      en: ["Interior", "Exterior", "Supervision", "Landscaping"],
+      fr: ["Intérieur", "Extérieur", "Supervision", "Aménagement Paysager"],
+    },
+    serviceslug: {
+      en: ["interior", "exterior", "supervision", "landscaping"],
+      fr: ["intérieur", "extérieur", "supervision", "aménagement-paysager"],
+    },
+    location: {
+      en: "Douala, Cameroon",
+      fr: "Douala, Cameroun",
+    },
+    introDescription: {
+      en: "Harmonious blend of modern architecture and natural beauty, the Sunset Sanctuary Retreat offers a tranquil and luxurious living experience amidst lush vegetation and serene landscapes.",
+      fr: "Mélange harmonieux d'architecture moderne et de beauté naturelle, le Sunset Sanctuary Retreat offre une expérience de vie tranquille et luxueuse au milieu d'une végétation luxuriante et de paysages sereins.",
+    },
+    aboutProject: {
+      en: [
+        "Sunset Sanctuary Retreat is a testament to architectural innovation and sustainable design. Nestled in the heart of nature, this two-level structure is equipped with large bay windows that offer residents a breathtaking view of the surrounding greenery. The upper level, characterized by wooden slats, adds an element of privacy while enhancing the aesthetic appeal.",
+        "The open garage on the ground floor offers convenience without compromising on design. The use of durable materials and seamless integration into the environment underline our commitment to an environmentally friendly lifestyle.",
+      ],
+      fr: [
+        "Sunset Sanctuary Retreat est un témoignage de l'innovation architecturale et de la conception durable. Nichée au cœur de la nature, cette structure à deux niveaux est dotée de grandes baies vitrées qui offrent aux résidents une vue imprenable sur la verdure environnante. Le niveau supérieur, caractérisé par des lattes de bois, ajoute un élément d'intimité tout en rehaussant l'attrait esthétique.",
+        "Le garage ouvert au rez-de-chaussée offre une commodité sans compromis sur le design. L'utilisation de matériaux durables et l'intégration transparente dans l'environnement soulignent notre engagement en faveur d'un mode de vie respectueux de l'environnement.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Ecological",
+        environment: "Lush Greenery, Serene Landscapes",
+        features:
+          "Large bay windows, Wooden slats on the upper floor, Open garage",
+      },
+      fr: {
+        style: "Moderne, Écologique",
+        environment: "Verdure luxuriante, Paysages sereins",
+        features:
+          "Grandes baies vitrées, Lamelles en bois à l'étage, Garage ouvert",
+      },
+    },
   },
   {
     id: 2,
-    name: "La Maison Kalafatas",
-    image: IMAGE10,
-    image2: IMAGE11,
-    services: ["Exterieur", "Supervision", "Amenagement Paysager"],
-    location: "Banana Island, Nigeria",
-  },
-  // {
-  //   id: 3,
-  //   name: "Concrete Cascade Creation",
-  //   image: IMAGE12,
-  //   image2: IMAGE13,
-  //   services: ["Interieur", "Supervision"],
-  //   location: "Konakry, Guinea"
-  // },
-  // {
-  //   id: 4,
-  //   name: "Sculpted Skyline Silhouette",
-  //   image: IMAGE14,
-  //   image2: IMAGE15,
-  //   services: ["Interieur", "Exterieur", "Amenagement Paysager"],
-  //   location: "Yoaunde, Cameroon"
-  // },
-  // {
-  //   id: 5,
-  //   name: "The Marble Monolith",
-  //   image: IMAGE8,
-  //   image2: IMAGE9,
-  //   services: ["Interieur", "Exterieur", "Supervision"],
-  //   location: "Libreville, Gabon"
-  // }
-];
-
-export const ProjectsData = [
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE,
-    services: [
-      "Interior",
-      "Exterior",
-      "Landscaping Amanagement",
-      "Supervision",
-    ],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2024,
-    image: IMAGE2,
-    services: ["Interior", "Exterior", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
+    slug: "maison-kalafatas",
+    name: "Maison Kalafatas",
     year: 2019,
-    image: IMAGE3,
-    services: ["Interior", "Exterior", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
+    images: [
+      {
+        image: IMAGE12,
+        description: {
+          en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+          fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+        },
+      },
+      {
+        image: IMAGE13,
+        description: {
+          en: "Elegant residential architecture highlighting simplicity, functionality, and harmony with nature, enhancing the living experience.",
+          fr: "Architecture résidentielle élégante soulignant la simplicité, la fonctionnalité et l'harmonie avec la nature, améliorant l'expérience de vie.",
+        },
+      },
+      {
+        image: IMAGE10,
+        description: {
+          en: "A modern, stylish living room with a white sofa, wooden coffee table, and large windows.",
+          fr: "Un salon moderne et élégant avec un canapé blanc, une table basse en bois et de grandes fenêtres.",
+        },
+      },
+      {
+        image: IMAGE11,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE8,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE9,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+    ],
+    services: {
+      en: ["Exterior", "Supervision", "Landscaping"],
+      fr: ["Extérieur", "Supervision", "Aménagement Paysager"],
+    },
+    serviceslug: {
+      en: ["exterior", "supervision", "landscaping"],
+      fr: ["extérieur", "supervision", "aménagement-paysager"],
+    },
+    location: {
+      en: "Conakry, Guinea",
+      fr: "Conakry, Guinée",
+    },
+    introDescription: {
+      en: "Harmonious blend of modern architecture and natural beauty, the Sunset Sanctuary Retreat offers a tranquil and luxurious living experience amidst lush vegetation and serene landscapes.",
+      fr: "Mélange harmonieux d'architecture moderne et de beauté naturelle, le Sunset Sanctuary Retreat offre une expérience de vie tranquille et luxueuse au milieu d'une végétation luxuriante et de paysages sereins.",
+    },
+    aboutProject: {
+      en: [
+        "Maison Kalafatas is a testament to architectural innovation and sustainable design. Nestled in the heart of nature, this two-level structure is equipped with large bay windows that offer residents a breathtaking view of the surrounding greenery. The upper level, characterized by wooden slats, adds an element of privacy while enhancing the aesthetic appeal.",
+        "The open garage on the ground floor offers convenience without compromising on design. The use of durable materials and seamless integration into the environment underline our commitment to an environmentally friendly lifestyle.",
+      ],
+      fr: [
+        "Maison Kalafatas est un témoignage de l'innovation architecturale et de la conception durable. Nichée au cœur de la nature, cette structure à deux niveaux est dotée de grandes baies vitrées qui offrent aux résidents une vue imprenable sur la verdure environnante. Le niveau supérieur, caractérisé par des lattes de bois, ajoute un élément d'intimité tout en rehaussant l'attrait esthétique.",
+        "Le garage ouvert au rez-de-chaussée offre une commodité sans compromis sur le design. L'utilisation de matériaux durables et l'intégration transparente dans l'environnement soulignent notre engagement en faveur d'un mode de vie respectueux de l'environnement.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Ecological",
+        environment: "Lush Greenery, Serene Landscapes",
+        features:
+          "Large bay windows, Wooden slats on the upper floor, Open garage",
+      },
+      fr: {
+        style: "Moderne, Écologique",
+        environment: "Verdure luxuriante, Paysages sereins",
+        features:
+          "Grandes baies vitrées, Lamelles en bois à l'étage, Garage ouvert",
+      },
+    },
   },
   {
-    name: "Sunset Sanctuary Retreat",
+    id: 3,
+    slug: "delemo-residence",
+    name: "Delemo Residence",
     year: 2020,
-    image: IMAGE4,
-    services: ["Interior", "Landscaping Amanagement", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
+    images: [
+      {
+        image: IMAGE10,
+        description: {
+          en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+          fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+        },
+      },
+      {
+        image: IMAGE11,
+        description: {
+          en: "Elegant residential architecture highlighting simplicity, functionality, and harmony with nature, enhancing the living experience.",
+          fr: "Architecture résidentielle élégante soulignant la simplicité, la fonctionnalité et l'harmonie avec la nature, améliorant l'expérience de vie.",
+        },
+      },
+      {
+        image: IMAGE10,
+        description: {
+          en: "A modern, stylish living room with a white sofa, wooden coffee table, and large windows.",
+          fr: "Un salon moderne et élégant avec un canapé blanc, une table basse en bois et de grandes fenêtres.",
+        },
+      },
+      {
+        image: IMAGE11,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE12,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE13,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+    ],
+    services: {
+      en: ["Interior", "Exterior", "Supervision"],
+      fr: ["Intérieur", "Extérieur", "Supervision"],
+    },
+    serviceslug: {
+      en: ["interior", "exterior", "supervision"],
+      fr: ["intérieur", "extérieur", "supervision"],
+    },
+    location: {
+      en: "Lagos, Nigeria",
+      fr: "Lagos, Nigeria",
+    },
+    introDescription: {
+      en: "Harmonious blend of modern architecture and natural beauty, the Sunset Sanctuary Retreat offers a tranquil and luxurious living experience amidst lush vegetation and serene landscapes.",
+      fr: "Mélange harmonieux d'architecture moderne et de beauté naturelle, le Sunset Sanctuary Retreat offre une expérience de vie tranquille et luxueuse au milieu d'une végétation luxuriante et de paysages sereins.",
+    },
+    aboutProject: {
+      en: [
+        "Delemo Residence is a testament to architectural innovation and sustainable design. Nestled in the heart of nature, this two-level structure is equipped with large bay windows that offer residents a breathtaking view of the surrounding greenery. The upper level, characterized by wooden slats, adds an element of privacy while enhancing the aesthetic appeal.",
+        "The open garage on the ground floor offers convenience without compromising on design. The use of durable materials and seamless integration into the environment underline our commitment to an environmentally friendly lifestyle.",
+      ],
+      fr: [
+        "Delemo Residence est un témoignage de l'innovation architecturale et de la conception durable. Nichée au cœur de la nature, cette structure à deux niveaux est dotée de grandes baies vitrées qui offrent aux résidents une vue imprenable sur la verdure environnante. Le niveau supérieur, caractérisé par des lattes de bois, ajoute un élément d'intimité tout en rehaussant l'attrait esthétique.",
+        "Le garage ouvert au rez-de-chaussée offre une commodité sans compromis sur le design. L'utilisation de matériaux durables et l'intégration transparente dans l'environnement soulignent notre engagement en faveur d'un mode de vie respectueux de l'environnement.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Ecological",
+        environment: "Lush Greenery, Serene Landscapes",
+        features:
+          "Large bay windows, Wooden slats on the upper floor, Open garage",
+      },
+      fr: {
+        style: "Moderne, Écologique",
+        environment: "Verdure luxuriante, Paysages sereins",
+        features:
+          "Grandes baies vitrées, Lamelles en bois à l'étage, Garage ouvert",
+      },
+    },
   },
   {
-    name: "Sunset Sanctuary Retreat",
+    id: 4,
+    slug: "hotel-marina",
+    name: "Hotel Marina",
     year: 2021,
-    image: IMAGE5,
-    services: ["Interior", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2022,
-    image: IMAGE6,
-    services: ["Exterior", "Landscaping Amanagement", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2013,
-    image: IMAGE7,
-    services: ["Interior", "Exterior", "Landscaping Amanagement"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2020,
-    image: IMAGE8,
-    services: ["Interior", "Exterior", "Supervision"],
-    link: ["/en/projects/sunset-sanctuary", "/fr/projets/sunset-sanctuary"],
+    images: [
+      {
+        image: IMAGE14,
+        description: {
+          en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+          fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+        },
+      },
+      {
+        image: IMAGE16,
+        description: {
+          en: "Elegant residential architecture highlighting simplicity, functionality, and harmony with nature, enhancing the living experience.",
+          fr: "Architecture résidentielle élégante soulignant la simplicité, la fonctionnalité et l'harmonie avec la nature, améliorant l'expérience de vie.",
+        },
+      },
+      {
+        image: IMAGE10,
+        description: {
+          en: "A modern, stylish living room with a white sofa, wooden coffee table, and large windows.",
+          fr: "Un salon moderne et élégant avec un canapé blanc, une table basse en bois et de grandes fenêtres.",
+        },
+      },
+      {
+        image: IMAGE11,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE12,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+      {
+        image: IMAGE14,
+        description: {
+          en: "A modern living space with wooden interiors, neutral-toned furniture, and unique pendant lights.",
+          fr: "Espace de vie moderne, intérieurs en bois, meubles neutres, lumières suspendues uniques.",
+        },
+      },
+    ],
+    services: {
+      en: ["Interior", "Exterior", "Supervision", "Landscaping"],
+      fr: ["Intérieur", "Extérieur", "Supervision", "Aménagement Paysager"],
+    },
+    serviceslug: {
+      en: ["interior", "exterior", "supervision", "landscaping"],
+      fr: ["intérieur", "extérieur", "supervision", "aménagement-paysager"],
+    },
+    location: {
+      en: "Yaounde, Cameroon",
+      fr: "Yaoundé, Cameroun",
+    },
+    introDescription: {
+      en: "Harmonious blend of modern architecture and natural beauty, the Sunset Sanctuary Retreat offers a tranquil and luxurious living experience amidst lush vegetation and serene landscapes.",
+      fr: "Mélange harmonieux d'architecture moderne et de beauté naturelle, le Sunset Sanctuary Retreat offre une expérience de vie tranquille et luxueuse au milieu d'une végétation luxuriante et de paysages sereins.",
+    },
+    aboutProject: {
+      en: [
+        "Hotel Marina is a testament to architectural innovation and sustainable design. Nestled in the heart of nature, this two-level structure is equipped with large bay windows that offer residents a breathtaking view of the surrounding greenery. The upper level, characterized by wooden slats, adds an element of privacy while enhancing the aesthetic appeal.",
+        "The open garage on the ground floor offers convenience without compromising on design. The use of durable materials and seamless integration into the environment underline our commitment to an environmentally friendly lifestyle.",
+      ],
+      fr: [
+        "Hotel Marina est un témoignage de l'innovation architecturale et de la conception durable. Nichée au cœur de la nature, cette structure à deux niveaux est dotée de grandes baies vitrées qui offrent aux résidents une vue imprenable sur la verdure environnante. Le niveau supérieur, caractérisé par des lattes de bois, ajoute un élément d'intimité tout en rehaussant l'attrait esthétique.",
+        "Le garage ouvert au rez-de-chaussée offre une commodité sans compromis sur le design. L'utilisation de matériaux durables et l'intégration transparente dans l'environnement soulignent notre engagement en faveur d'un mode de vie respectueux de l'environnement.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Ecological",
+        environment: "Lush Greenery, Serene Landscapes",
+        features:
+          "Large bay windows, Wooden slats on the upper floor, Open garage",
+      },
+      fr: {
+        style: "Moderne, Écologique",
+        environment: "Verdure luxuriante, Paysages sereins",
+        features:
+          "Grandes baies vitrées, Lamelles en bois à l'étage, Garage ouvert",
+      },
+    },
   },
 ];
 
-export const DetailsMoreData = [
-  {
-    image: IMAGE10,
-    text: "Poser les bases : La première étape de la réalisation du rêve du Sunset Sanctuary Retreat.",
-  },
-  {
-    image: IMAGE9,
-    text: "Poser les bases : La première étape de la réalisation du rêve du Sunset Sanctuary Retreat.",
-  },
-  {
-    image: IMAGE8,
-    text: "Poser les bases : La première étape de la réalisation du rêve du Sunset Sanctuary Retreat.",
-  },
-  {
-    image: IMAGE7,
-    text: "Poser les bases : La première étape de la réalisation du rêve du Sunset Sanctuary Retreat.",
-  },
-];
 
-export const MoreProjects = [
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE8,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE9,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE10,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE11,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE12,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE12,
-  },
-  {
-    name: "Sunset Sanctuary Retreat",
-    year: 2023,
-    image: IMAGE14,
-  },
-];
 
 export const swiperSettings = {
   slidesPerView: 1,

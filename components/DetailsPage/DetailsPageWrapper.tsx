@@ -1,14 +1,28 @@
 "use client";
 
 import React, {useEffect, useState } from 'react'
+import { notFound } from 'next/navigation'
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'next/navigation';
 import IMAGE from "../../public/images/footerr3.jpg"
+import { ProjectsContent } from '@/utils';
 import Lenis from "@studio-freight/lenis";
 import { DetailsHero, DetailsImages, DetailsDetails, DetailsMore, DetailsOther, FooterReusable, Navbar, Preloader2  } from '..'
 
 const DetailsPageWrapper = () => {
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
+
+  //use useParams to extract the project params from our pathname
+  const projectParams = useParams();
+  const projectSlug = projectParams.project; 
+
+  //Filter out current Project using its slug
+  const currentProject = projectSlug ? ProjectsContent.find(project => project.slug === projectSlug) : null;
+
+  if (!currentProject) {
+    notFound()
+  }
 
   useEffect(() => {
     const lenisInstance = new Lenis({
@@ -64,12 +78,12 @@ const DetailsPageWrapper = () => {
       <Preloader2 imageLoaded={imageLoaded} setAnimationFinished={setAnimationFinished} localState={localstate}/>
       <Navbar lang={currentlocale} animationFinished={animationFinished} setLocalState={setLocalState}/>
       <DetailsHero
-        animationFinished={animationFinished} />
+        animationFinished={animationFinished} currentProject={currentProject} currentLocale={currentlocale} />
       <DetailsImages setImageLoaded={setImageLoaded}
-        animationFinished={animationFinished}/>
-      <DetailsDetails />
-      <DetailsMore />
-      <DetailsOther />
+        animationFinished={animationFinished} currentProject={currentProject}/>
+      <DetailsDetails currentProject={currentProject} currentLocale={currentlocale}/>
+      <DetailsMore currentProject={currentProject} currentLocale={currentlocale}/>
+      <DetailsOther currentProject={currentProject} currentLocale={currentlocale}/>
       <FooterReusable data={footerData}/>
     </>
   )
