@@ -51,6 +51,15 @@ export default function LanguageSelector({ setLocalState }: TransitionProps) {
           : newPathname.replace("/a-propos", "/about");
     }
 
+    // Check if the current page is 'projets' or 'projects'
+    if (newPathname.includes("/galerie") || newPathname.includes("/gallery")) {
+      // Adjust the pathname based on the new locale
+      newPathname =
+        newLocale === "fr"
+          ? newPathname.replace("/gallery", "/galerie")
+          : newPathname.replace("/galerie", "/gallery");
+    }
+
     // Check if there are any search parameters and adjust them based on the new locale
     if (serviceParam) {
       const service = serviceParam;

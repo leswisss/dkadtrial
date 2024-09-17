@@ -27,7 +27,7 @@ const Preloader2 = ({
   const project = t("Navigation:projets");
   const about = t("Navigation:apropos");
   const services = t("Navigation:services");
-  const details = "Details";
+  const gallery = t("Navigation:gallery");
   const contact = t("Navigation:contacter");
   const error = t("Navigation:error");
 
@@ -52,11 +52,12 @@ const Preloader2 = ({
         setPageName(services);
       } else if (currentPathname === "/fr/contact" || currentPathname === "/en/contact") {
         setPageName(contact);
+      } else if (currentPathname === "/fr/galerie" || currentPathname === "/en/gallery") {
+        setPageName(gallery);
       } else if (
         (currentPathname.includes("/fr/projets/") && currentPathname !== "/fr/projets") ||
         (currentPathname.includes("/en/projects/") && currentPathname !== "/en/projects")
       ) {
-      
         // Validate if the project exists
         const projectData = ProjectsContent.find(project => project.slug === slugg);
         if (projectData) {

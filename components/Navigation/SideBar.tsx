@@ -25,9 +25,10 @@ const SideBar = ({ activeSide, setActiveSide, setLocalState }: sideBarProps) => 
   const home_trans = t("accueil")
   const pro_trans = t("projets") 
   const about_trans = t("apropos")
+  const gallery_trans = t("gallery")
   const serv_trans = "Services"
 
-  const navigation__menu = [home_trans, pro_trans, about_trans, serv_trans]
+  const navigation__menu = [home_trans, pro_trans, about_trans, serv_trans, gallery_trans]
 
   return (
     <motion.div

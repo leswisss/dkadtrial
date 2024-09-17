@@ -99,4 +99,3 @@ const Accordion = ({
 
 export default Accordion;
 
-//${activeAccordion===index ? styles.active : ""}

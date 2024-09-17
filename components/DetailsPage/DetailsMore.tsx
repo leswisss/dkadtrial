@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { ProjectsContent } from "@/utils";
 import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { ProjectProps, ImageProps } from "@/types";
@@ -57,9 +56,6 @@ const DetailsMore = ({currentProject, currentLocale}: {currentProject: ProjectPr
 
           const y = useTransform(scrollYProgress, [0, 1], [transform, 0]);
 
-          // Extract each image text
-          const imageText = data && currentLocale === "en" ? data.description.en : data && currentLocale === "fr" ? data.description.fr : "";
-
           return (
             <div className={styles.more__wrapper} ref={container} key={i}>
               <motion.div className={styles.more__image} style={{ y }}>
@@ -70,11 +66,6 @@ const DetailsMore = ({currentProject, currentLocale}: {currentProject: ProjectPr
                   fill
                 />
               </motion.div>
-              <div className={styles.more__overlay}>
-                <div className={styles.overlay__content}>
-                  <p>{imageText}</p>
-                </div>
-              </div>
             </div>
           );
         })}

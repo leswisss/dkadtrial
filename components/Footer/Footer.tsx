@@ -11,7 +11,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import IMAGE from "../../public/images/businesscard.jpg";
-import IMAGE3 from "../../public/images/bettermarque.jpg"
+import IMAGE3 from "../../public/images/bettermarque.jpg";
 import styles from "../../styles/Footer/footer.module.scss";
 import { Icon } from "@iconify/react";
 
@@ -57,6 +57,7 @@ const Footer = () => {
   const pro_trans = t("projets");
   const about_trans = t("apropos");
   const serv_trans = "Services";
+  const gall_trans = t("gallery")
 
   const navigation__menu = [about_trans, serv_trans, contact_trans, pro_trans];
 
@@ -193,7 +194,11 @@ const Footer = () => {
                   {FooterLinks.map((data, i) => (
                     <Link
                       key={i}
-                      href={`/${currentLocale}${data.link}`}
+                      href={
+                        currentLocale === "fr"
+                          ? `/${currentLocale}${data.link[0]}`
+                          : `/${currentLocale}${data.link[1]}`
+                      }
                       className={styles.footer__link}
                     >
                       {navigation__menu[i]}
@@ -212,10 +217,10 @@ const Footer = () => {
                       +237 690-756-994
                     </Link>
                     <Link
-                      href="mailto:onac464@yahoo.com"
+                      href="mailto:dkadstudios@yahoo.com"
                       className={styles.footer__link}
                     >
-                      onac464@yahoo.com
+                      dkadstudios@yahoo.com
                     </Link>
                   </div>
                 </div>
@@ -223,7 +228,7 @@ const Footer = () => {
                   <span className={styles.nav_header}>{t("adresse")}</span>
                   <div className={styles.footer__links}>
                     <span className={styles.footer__link}>
-                      Rue 1.894, Yaounde I(Bastos)
+                      Commisariat Bastos, Yaounde
                     </span>
                   </div>
                 </div>
@@ -252,9 +257,9 @@ const Footer = () => {
           </div>
           <div className={styles.footer__bottom}>
             <div className={styles.menu}>
-              <span className={styles.nav_header}>{t("inscrire")}</span>
+              <span className={styles.nav_header}>{t("explore")}</span>
               <div className={styles.footer__links}>
-                <span className={styles.footer__link}>Newsletter</span>
+                <Link href={`${currentLocale==="fr" ? "/fr/galerie": "/en/gallery"}`} className={styles.footer__link}>{gall_trans}</Link>
               </div>
             </div>
           </div>
@@ -285,7 +290,6 @@ const Footer = () => {
               animate={activeBetter ? "open" : "closed"}
               className={styles.better__marque}
             >
-              {/* <div className={styles.bi__wrapper} style={{clipPath: activeBetter ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", transition: "clip-path 0.7s cubic-bezier(0.7, 0, 0.3, 1)", transitionDelay: "0.7s"}}> */}
               <div
                 className={styles.bi__wrapper}
                 style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }}
@@ -306,12 +310,11 @@ const Footer = () => {
                     onClick={() => setActiveBetter(false)}
                   />
                   <Magnetic>
-                    <Link href="/">{t("Navigation:contact")}</Link>
+                    <Link href="https://wa.me/+237693370638">{t("Navigation:contact")}</Link>
                   </Magnetic>
                 </div>
               </div>
               <div className={styles.bc__content}>
-                {/* <div className={styles.logo} style={{clipPath: activeBetter ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", transition: "clip-path 0.7s cubic-bezier(0.7, 0, 0.3, 1)", transitionDelay: "1.4s"}}> */}
                 <div
                   className={styles.logo}
                   style={{
@@ -329,7 +332,7 @@ const Footer = () => {
                   />
                 </div>
                 <div className={styles.text}>{splitwords()}</div>
-                {/* <div className={styles.b__footer} style={{clipPath: activeBetter ? "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" : "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", transition: "clip-path 0.7s cubic-bezier(0.7, 0, 0.3, 1)", transitionDelay: "2.8s"}}> */}
+
                 <div
                   className={styles.b__footer}
                   style={{
@@ -337,10 +340,10 @@ const Footer = () => {
                   }}
                   ref={footerRef}
                 >
-                  <div className={styles.coming}>{t("Navigation:website")}</div>
+                  <Link href="https://www.bettermarque.com" className={styles.coming}>{t("Navigation:website")}</Link>
                   <div className={styles.button}>
-                    <Link href="/">Instagram</Link>
-                    <Link href="/">Facebook</Link>
+                    <Link href="https://www.instagram.com/bettermarque/">Instagram</Link>
+                    <Link href="https://web.facebook.com/profile.php?id=61555159313413">Facebook</Link>
                   </div>
                 </div>
               </div>
@@ -350,7 +353,7 @@ const Footer = () => {
             <Image
               loading="eager"
               src={IMAGE}
-              alt="Carte de Visiste"
+              alt="Carte de Visite"
               fill
               quality={100}
               sizes="(max-width: 600px) 100%, 100%"

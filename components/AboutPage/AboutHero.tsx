@@ -21,7 +21,6 @@ const AboutHero = ({setImageLoaded, animationFinished}: AboutInterface) => {
 
   const content = [text1, text2];
 
-
   const splitwords = (phrase: string, condition: boolean) => {
     let body: JSX.Element[] = [];
     phrase.split(" ").forEach((word, i) => {

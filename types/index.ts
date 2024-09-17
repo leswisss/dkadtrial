@@ -21,7 +21,6 @@ export interface ImageDescription {
 
 export interface ImageProps {
   image: StaticImageData;
-  description: ImageDescription;
 };
 
 export interface Services {

@@ -11,7 +11,7 @@ const AboutTeam = ({lenis}: {lenis: Lenis | null}) => {
   const title = t("AboutPage:team")
   const text2 = t("AboutPage:teamtext")
 
-  const [activeAccordion, setActiveAccordion] = useState(-1);
+  const [activeAccordion, setActiveAccordion] = useState(0);
 
   return (
     <section className={`${styles.team__section}`}>

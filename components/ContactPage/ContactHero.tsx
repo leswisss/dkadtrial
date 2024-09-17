@@ -17,7 +17,7 @@ const ContactHero = ({
 }) => {
   const { t } = useTranslation();
 
-  const location = "Rue 1.894, Yaoundé I (Bastos)"
+  const location = "Commisariat Bastos, Yaoundé"
   const refs = useRef<HTMLSpanElement[]>([]);
   const imageRef = useRef(null);
 
@@ -70,7 +70,7 @@ const ContactHero = ({
     },
     {
       name: t("ContactPage:address"),
-      data: "Rue 1.894, Yaoundé I (Bastos)",
+      data: "Commisariat Bastos, Yaoundé",
     },
   ];
 
@@ -82,7 +82,7 @@ const ContactHero = ({
         </div>
         <div className={styles.contact__wrapper}>
           <div className={styles.contact__content}>
-            <Link href="/" className={styles.image__wrapper} ref={imageRef}>
+            <Link href="https://maps.app.goo.gl/yxn5gZLfs2fwzCj86" className={styles.image__wrapper} ref={imageRef}>
               <Image
                 src={IMAGE}
                 fill

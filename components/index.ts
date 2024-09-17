@@ -44,6 +44,8 @@ import Transition from "./Navigation/Transition";
 import Preloader from "./Navigation/Preloader";
 import AnimatedPhrase from "./Navigation/AnimatePhrase";
 import Preloader2 from "./Navigation/Preloader2";
+import GalleryPageWrapper from "./AboutPage/GalleryPageWrapper";
+import Gallery from "./AboutPage/Gallery";
 
 export {
   Navbar,
@@ -91,5 +93,7 @@ export {
   Transition,
   Preloader,
   AnimatedPhrase,
-  Preloader2
+  Preloader2,
+  GalleryPageWrapper,
+  Gallery
 }

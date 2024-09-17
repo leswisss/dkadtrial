@@ -28,6 +28,11 @@ export default {
         locale: false,
       },
       {
+        source: "/fr/galerie",
+        destination: "/fr/gallery",
+        locale: false,
+      },
+      {
         source: "/fr/a-propos",
         destination: "/fr/about",
         locale: false,

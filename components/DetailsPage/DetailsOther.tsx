@@ -18,15 +18,41 @@ import "swiper/css";
 const DetailsOther = ({currentProject, currentLocale}: {currentProject: ProjectProps | undefined | null; currentLocale: string }) => {
   const projectName = currentProject ? currentProject.name : "";
   
-  //Function to get other Projects
-  const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
-    const currentList = name ? list.filter(project => project.name !== name) : []
-    const returnedList = currentList ? currentList.sort((a, b) => b.year - a.year) : []
+  // //Function to get other Projects
+  // const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
+  //   const currentList = name ? list.filter(project => project.name !== name) : []
+  //   const returnedList = currentList ? currentList.sort((a, b) => b.year - a.year) : []
 
-    return returnedList
+  //   return returnedList
+  // }
+
+  // const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
+
+  // Function to get other Projects
+const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
+  if (!name) return [];
+
+  // Find the index of the current project
+  const currentIndex = list.findIndex(project => project.name === name);
+  if (currentIndex === -1) return [];
+
+  // Get projects after the current project
+  const projectsAfter = list.slice(currentIndex + 1);
+
+  // If there are 5 or more projects after, return the first 5
+  if (projectsAfter.length >= 5) {
+    return projectsAfter.slice(0, 5);
   }
 
-  const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
+  // If there are less than 5 projects after, get the remaining projects from before
+  const projectsBefore = list.slice(0, currentIndex);
+  const remainingCount = 5 - projectsAfter.length;
+
+  // Combine projects after and the required number of projects before
+  return [...projectsAfter, ...projectsBefore.slice(-remainingCount)];
+};
+
+const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
 
   const {t, i18n} = useTranslation();
 
