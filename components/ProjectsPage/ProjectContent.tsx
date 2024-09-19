@@ -1,6 +1,6 @@
-"use cient";
+"use client";
 
-import React from "react";
+import React, {useState} from "react";
 import { useSearchParams } from "next/navigation";
 import { ProjectProps } from "@/types";
 import { Project, Rounded } from "..";
@@ -18,6 +18,7 @@ const ProjectContent = ({
 }) => {
   const searchParams = useSearchParams();
   const serviceParam = searchParams.get("service");
+
 
   //Filter the items by services and sorting from new to old
   const filterProjects = (
@@ -42,6 +43,17 @@ const ProjectContent = ({
     currentLocale
   );
 
+  //Managing Pagination
+  const [itemsToShow, setItemsToShow] = useState(4);
+
+  const handleLoadMore = () => {
+    if (itemsToShow < filteredProjects.length) {
+      setItemsToShow(itemsToShow + 4);
+    }
+  };
+
+  const isReachingEnd = itemsToShow >= filteredProjects.length;
+
   return (
     <section
       className={styles.content__section}
@@ -55,19 +67,23 @@ const ProjectContent = ({
     >
       <div className={`container ${styles.content__container}`}>
         <div className={styles.content__wrapper}>
-          {filteredProjects.map((data, i) => (
+          {filteredProjects.slice(0, itemsToShow).map((data, i) => (
             <Project data={data} key={i} currentLocale={currentLocale} />
           ))}
         </div>
+        {
+          !isReachingEnd && 
         <div className={styles.rounded__div}>
           <Rounded
             backgroundColor="#013cac"
             classNames={styles.rounded}
             linker={false}
+            onClick={handleLoadMore}
           >
             <p>{cta}</p>
           </Rounded>
         </div>
+        }
       </div>
     </section>
   );

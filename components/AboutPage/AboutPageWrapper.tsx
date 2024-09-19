@@ -72,7 +72,7 @@ const AboutPageWrapper = () => {
       <AboutHero setImageLoaded={setImageLoaded}
         animationFinished={animationFinished}/>
       <AboutMission />
-      <AboutTeam lenis={lenis} />
+      <AboutTeam lenis={lenis} currentLocale={currentlocale}/>
       <FooterReusable data={footerData}/>
     </>
   )

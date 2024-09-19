@@ -34,7 +34,7 @@ const ContactSpecialist = () => {
         <div className={styles.right}>
           <div className={styles.right__text} ref={ref}>{splitwords(text, inView)}</div>
           <div className={styles.rounded__button}>
-            <Rounded linker link="tel:690756994" backgroundColor='#ffffff' classNames={styles.rounded}>
+            <Rounded linker link="tel:+237690756994" backgroundColor='#ffffff' classNames={styles.rounded}>
               <p>{t("ContactPage:specialist2")}</p>
             </Rounded>
           </div>

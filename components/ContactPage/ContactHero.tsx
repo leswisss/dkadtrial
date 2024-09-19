@@ -65,8 +65,8 @@ const ContactHero = ({
     },
     {
       name: t("ContactPage:mail"),
-      data: "onac464@yahoo.com",
-      link: "mailto:onac464@yahoo.com",
+      data: "dkadstudios@yahoo.com",
+      link: "mailto:dkadstudios@yahoo.com",
     },
     {
       name: t("ContactPage:address"),

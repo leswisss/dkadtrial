@@ -9,10 +9,22 @@ import styles from "../../styles/AboutPage/gallery.module.scss";
 
 const Gallery = ({ currentLocale }: { currentLocale: string }) => {
   const [activeModal, setActiveModal] = useState({ value: false, index: 0 });
+
+  //Managing Pagination
+  const [itemsToShow, setItemsToShow] = useState(6);
+
+  const handleLoadMore = () => {
+    if (itemsToShow < GalleryDetails.length) {
+      setItemsToShow(itemsToShow + 6);
+    }
+  };
+
+  const isReachingEnd = itemsToShow >= GalleryDetails.length;
+
   return (
     <>
       <div className={styles.gallery__wrapper}>
-        {GalleryDetails.map((data, i) => (
+        {GalleryDetails.slice(0, itemsToShow).map((data, i) => (
           <div
             key={i}
             className={styles.gallery__card}
@@ -53,13 +65,16 @@ const Gallery = ({ currentLocale }: { currentLocale: string }) => {
           </span>
         </div>
       </div>
-      <Rounded
-        backgroundColor="#013cac"
-        classNames={styles.rounded}
-        linker={false}
-      >
-        <p>{currentLocale==="fr" ? "Voir plus" : "See more"}</p>
-      </Rounded>
+      {!isReachingEnd && (
+        <Rounded
+          backgroundColor="#013cac"
+          classNames={styles.rounded}
+          linker={false}
+          onClick={handleLoadMore}
+        >
+          <p>{currentLocale === "fr" ? "Voir plus" : "See more"}</p>
+        </Rounded>
+      )}
     </>
   );
 };

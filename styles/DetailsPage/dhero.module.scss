@@ -88,8 +88,11 @@
       }
 
       .details__intro {
-        p {
-          font-size: calc(var(--h2-font-size) - 0.3rem);
+        .word__wrapper {
+          .word {
+            font-size: calc(var(--h2-font-size) - 0.3rem);
+            line-height: 1.15;
+          }
         }
       }
     }
@@ -106,9 +109,11 @@
       }
 
       .details__intro {
-        p {
-          font-size: calc(var(--h2-font-size) - 0.5rem);
-          line-height: 1.11;
+        .word__wrapper {
+          .word {
+            font-size: calc(var(--h2-font-size) - 0.5rem);
+            line-height: 1.11;
+          }
         }
       }
     }
@@ -120,15 +125,8 @@
     .details__container {
       .details__header {
         .larger__font {
-          font-size: calc(var(--biggest-font-size) - 3.6rem) !important;
+          font-size: calc(var(--biggest-font-size) - 3.3rem) !important;
           font-family: var(--medium-font);
-        }
-      }
-
-      .details__intro {
-        p {
-          font-size: calc(var(--h2-font-size) - 0.5rem);
-          line-height: 1.11;
         }
       }
     }

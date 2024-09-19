@@ -47,7 +47,7 @@ const ContactPageWrapper = () => {
     id: 1,
     title: t("ContactPage:fixedtitle"),
     text: t("ContactPage:fixedtext"),
-    link: "mailto:onac464@yahoo.com",
+    link: "mailto:dkadstudios@yahoo.com",
     linktext: t("ContactPage:fixedcta"),
     image: [IMAGE2, IMAGE3, IMAGE4]
   };

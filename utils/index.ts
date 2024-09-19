@@ -1,20 +1,33 @@
 import IMAGE from "../public/images/footerr4.jpg";
 import IMAGE2 from "../public/images/footerr7.jpg";
 import IMAGE3 from "../public/images/home.jpeg";
-import IMAGE4 from "../public/images/interior.jpg";
-import IMAGE5 from "../public/images/exterior.jpg";
-import IMAGE6 from "../public/images/supervision.jpg";
-import IMAGE7 from "../public/images/landscape.jpg";
-import IMAGE8 from "../public/images/project1.jpg";
-import IMAGE9 from "../public/images/project2.jpg";
-import IMAGE10 from "../public/images/project3.jpg";
-import IMAGE11 from "../public/images/project4.jpg";
-import IMAGE12 from "../public/images/project5.jpg";
-import IMAGE13 from "../public/images/project6.jpg";
-import IMAGE14 from "../public/images/project7.png";
-import IMAGE16 from "../public/images/project8.png";
 import IMAGE15 from "../public/images/services.jpg";
 import IMAGE17 from "../public/images/footerr6.jpg";
+
+
+//Gallery Images
+import GALLERY1 from "../public/images/Gallery/gallery1-min.jpg";
+import GALLERY2 from "../public/images/Gallery/gallery2-min.jpg";
+import GALLERY3 from "../public/images/Gallery/gallery3-min.jpg";
+import GALLERY4 from "../public/images/Gallery/gallery4-min.jpg";
+import GALLERY5 from "../public/images/Gallery/gallery5-min.jpg";
+import GALLERY6 from "../public/images/Gallery/gallery6-min.jpg";
+import GALLERY7 from "../public/images/Gallery/gallery7-min.jpg";
+import GALLERY8 from "../public/images/Gallery/gallery8-min.jpg";
+import GALLERY9 from "../public/images/Gallery/gallery9-min.jpg";
+import GALLERY10 from "../public/images/Gallery/gallery10-min.jpg";
+import GALLERY11 from "../public/images/Gallery/gallery11-min.jpg";
+import GALLERY12 from "../public/images/Gallery/gallery12-min.jpg";
+import GALLERY13 from "../public/images/Gallery/gallery13-min.jpg";
+import GALLERY14 from "../public/images/Gallery/gallery14-min.jpg";
+import GALLERY15 from "../public/images/Gallery/gallery15-min.jpg";
+import GALLERY16 from "../public/images/Gallery/gallery16-min.jpg";
+import GALLERY17 from "../public/images/Gallery/gallery17-min.jpg";
+import GALLERY18 from "../public/images/Gallery/gallery18-min.jpg";
+import GALLERY19 from "../public/images/Gallery/gallery19-min.jpg";
+import GALLERY20 from "../public/images/Gallery/gallery20-min.jpg";
+import GALLERY21 from "../public/images/Gallery/gallery21-min.jpg";
+
 
 //Project Images
 import PROJECT11 from "../public/images/Project1/Project11-min.jpg";
@@ -1172,7 +1185,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE,
+    image: GALLERY1,
   },
   {
     id: 2,
@@ -1180,7 +1193,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE2,
+    image: GALLERY2,
   },
   {
     id: 3,
@@ -1188,7 +1201,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE3,
+    image: GALLERY3,
   },
   {
     id: 4,
@@ -1196,7 +1209,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE4,
+    image: GALLERY4,
   },
   {
     id: 5,
@@ -1204,7 +1217,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE5,
+    image: GALLERY5,
   },
   {
     id: 6,
@@ -1212,7 +1225,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE6,
+    image: GALLERY6,
   },
   {
     id: 7,
@@ -1220,7 +1233,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE7,
+    image: GALLERY7,
   },
   {
     id: 8,
@@ -1228,7 +1241,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE8,
+    image: GALLERY8,
   },
   {
     id: 9,
@@ -1236,7 +1249,7 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE9,
+    image: GALLERY9,
   },
   {
     id: 10,
@@ -1244,6 +1257,94 @@ export const GalleryDetails = [
       en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
       fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
     },
-    image: IMAGE10,
+    image: GALLERY10,
+  },
+  {
+    id: 11,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY11,
+  },
+  {
+    id: 12,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY12,
+  },
+  {
+    id: 13,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY13,
+  },
+  {
+    id: 14,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY14,
+  },
+  {
+    id: 15,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY15,
+  },
+  {
+    id: 16,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY16,
+  },
+  {
+    id: 17,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY17,
+  },
+  {
+    id: 18,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY18,
+  },
+  {
+    id: 19,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY19,
+  },
+  {
+    id: 20,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY20,
+  },
+  {
+    id: 21,
+    desc: {
+      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
+      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+    },
+    image: GALLERY21,
   },
 ];
