@@ -38,9 +38,9 @@ const Gallery = ({ currentLocale }: { currentLocale: string }) => {
                 alt={currentLocale === "fr" ? data.desc.fr : data.desc.en}
               />
             </div>
-            <div className={styles.gallery__content}>
+            {/* <div className={styles.gallery__content}>
               <p>{currentLocale === "fr" ? data.desc.fr : data.desc.en}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

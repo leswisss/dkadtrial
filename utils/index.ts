@@ -113,6 +113,19 @@ import PROJECT153 from "../public/images/Project15/Project153.jpg";
 import PROJECT154 from "../public/images/Project15/Project154.jpg";
 import PROJECT155 from "../public/images/Project15/Project155.jpg";
 
+import PROJECT161 from "../public/images/Project16/Project161.jpg";
+import PROJECT162 from "../public/images/Project16/Project162.jpg";
+import PROJECT163 from "../public/images/Project16/Project163.jpg";
+import PROJECT164 from "../public/images/Project16/Project164.jpg";
+import PROJECT165 from "../public/images/Project16/Project165.jpg";
+import PROJECT166 from "../public/images/Project16/Project166.jpg";
+
+import PROJECT171 from "../public/images/Project17/Project171.jpg";
+import PROJECT172 from "../public/images/Project17/Project172.jpg";
+import PROJECT173 from "../public/images/Project17/Project173.jpg";
+import PROJECT174 from "../public/images/Project17/Project174.jpg";
+
+
 export const NavMenu = [
   {
     id: 1,
@@ -400,8 +413,8 @@ export const ProjectsContent = [
   },
   {
     id: 4,
-    slug: "timoland-complex",
-    name: "TimoLand Complex",
+    slug: "timoland-hotel-Yaounde",
+    name: "TimoLand Hotel Yaounde",
     year: 2024,
     images: [
       {
@@ -424,18 +437,18 @@ export const ProjectsContent = [
       fr: "Yaoundé, Cameroun",
     },
     introDescription: {
-      en: "A modern multi-purpose complex featuring sleek design, glass facades, and vibrant accents, offering diverse commercial and leisure spaces in a prime urban location.",
-      fr: "Un complexe polyvalent moderne au design épuré, aux façades de verre et aux accents vibrants, offrant divers espaces commerciaux et de loisirs dans un emplacement urbain de premier choix.",
+      en: "A modern multi-purpose hotel featuring sleek design, glass facades, and vibrant accents, offering luxurious accommodation and exceptional hospitality in a prime urban location.",
+      fr: "Un hôtel polyvalent moderne au design épuré, aux façades de verre et aux accents vibrants, offrant un hébergement luxueux et une hospitalité exceptionnelle dans un emplacement urbain de premier choix.",
     },
     aboutProject: {
       en: [
-        "Timo Land Complex is a contemporary architectural marvel designed to blend commercial and leisure spaces seamlessly. The building features striking glass facades, bold color elements, and an inviting layout. ",
-        "It offers state-of-the-art facilities for shopping, dining, and entertainment, making it a central hub for both business and relaxation. Its strategic location ensures easy access and visibility, promising to become a landmark destination in the area.",
-      ],
+        "TimoLand Hôtel is a contemporary architectural marvel designed to offer luxurious accommodation and exceptional hospitality. The building features striking glass facades, bold color elements, and an inviting layout.",
+        "It provides state-of-the-art facilities for dining, relaxation, and events, making it a central hub for both business and leisure travelers. Its strategic location ensures easy access and visibility, promising to become a landmark destination in the area."
+    ],
       fr: [
-        "Le Timo Land Complex est une merveille architecturale contemporaine conçue pour combiner harmonieusement les espaces commerciaux et de loisirs. Le bâtiment présente des façades en verre remarquables, des éléments de couleur audacieux et un agencement accueillant.",
-        "Il offre des installations ultramodernes pour le shopping, la restauration et le divertissement, ce qui en fait un lieu central pour les affaires et la détente. Son emplacement stratégique garantit un accès et une visibilité faciles, et promet de devenir une destination phare dans le quartier.",
-      ],
+        "L'Hôtel TimoLand est une merveille architecturale contemporaine conçue pour offrir un hébergement luxueux et une hospitalité exceptionnelle. Le bâtiment présente des façades en verre remarquables, des éléments de couleur audacieux et un agencement accueillant.",
+        "Il offre des installations ultramodernes pour la restauration, la détente et les événements, ce qui en fait un lieu central pour les voyageurs d'affaires et de loisirs. Son emplacement stratégique garantit un accès et une visibilité faciles, et promet de devenir une destination phare dans le quartier."
+    ],
     },
     projectInfo: {
       en: {
@@ -455,7 +468,7 @@ export const ProjectsContent = [
     id: 5,
     slug: "project-2306",
     name: "Project 2306",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT61,
@@ -521,7 +534,7 @@ export const ProjectsContent = [
     id: 6,
     slug: "the-haven",
     name: "The Haven",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT71,
@@ -587,7 +600,7 @@ export const ProjectsContent = [
     id: 7,
     slug: "horizon-residences",
     name: "Horizon Residences",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT81,
@@ -648,7 +661,7 @@ export const ProjectsContent = [
     id: 8,
     slug: "santalucia-supermarket",
     name: "Santa Lucia",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT91,
@@ -711,7 +724,7 @@ export const ProjectsContent = [
     id: 9,
     slug: "culinary-corner",
     name: "Culinary Corner",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT101,
@@ -777,7 +790,7 @@ export const ProjectsContent = [
     id: 10,
     slug: "palm-grove",
     name: "Palm Grove",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT112,
@@ -837,7 +850,7 @@ export const ProjectsContent = [
     id: 11,
     slug: "villa-0623",
     name: "Villa 0623",
-    year: 2024,
+    year: 2022,
     images: [
       {
         image: PROJECT121,
@@ -895,7 +908,7 @@ export const ProjectsContent = [
     id: 12,
     slug: "timeless-interiors",
     name: "Timeless Interiors",
-    year: 2024,
+    year: 2022,
     images: [
       {
         image: PROJECT131,
@@ -962,7 +975,7 @@ export const ProjectsContent = [
     id: 13,
     slug: "skyline-harmony",
     name: "Skyline Harmony",
-    year: 2024,
+    year: 2022,
     images: [
       {
         image: PROJECT141,
@@ -1022,7 +1035,7 @@ export const ProjectsContent = [
     id: 14,
     slug: "serene-residence",
     name: "Serene Residence",
-    year: 2024,
+    year: 2023,
     images: [
       {
         image: PROJECT151,
@@ -1077,6 +1090,130 @@ export const ProjectsContent = [
         environment: "Urbain, Élégant",
         features:
           "Lignes épurées, Éclairage chaleureux, Aménagement paysager minimaliste",
+      },
+    },
+  },
+  {
+    id: 15,
+    slug: "santa-lucia-bali",
+    name: "Santa Lucia Bali",
+    year: 2024,
+    images: [
+      {
+        image: PROJECT171,
+      },
+      {
+        image: PROJECT172,
+      },
+      {
+        image: PROJECT173,
+      },
+      {
+        image: PROJECT174,
+      },
+    ],
+    services: {
+      en: ["Exterior", "Supervision", "Landscaping"],
+      fr: ["Extérieur", "Supervision", "Aménagement Paysager"],
+    },
+    serviceslug: {
+      en: ["exterior", "supervision", "landscaping"],
+      fr: ["extérieur", "supervision", "aménagement-paysager"],
+    },
+    location: {
+      en: "Douala, Cameroon",
+      fr: "Douala, Cameroun",
+    },
+    introDescription: {
+      en: "A contemporary shopping center characterized by its unique geometric exterior, abundant greenery, and large glass windows, providing a lively and welcoming retail atmosphere.",
+      fr: "Un centre commercial contemporain caractérisé par son extérieur géométrique unique, son abondante verdure et ses grandes baies vitrées, offrant une atmosphère commerciale vivante et accueillante.",
+    },
+    aboutProject: {
+      en: [
+        "Santa Lucia Mall is notable for its striking geometric facade and lush plants surrounding it. The expansive glass windows allow people to see the well-lit inside, creating a friendly vibe for those shopping there.",
+        "The combination of sleek modern design and natural touches makes this mall a highlight in the city. With plenty of parking and a variety of stores, Santa Lucia Mall ensures a lively shopping experience.",
+      ],
+      fr: [
+        "Le Santa Lucia Mall se distingue par sa façade géométrique frappante et les plantes luxuriantes qui l'entourent. Les grandes baies vitrées permettent de voir l'intérieur bien éclairé, ce qui crée une ambiance conviviale pour ceux qui y font leurs achats.",
+        "L'association d'un design moderne et élégant et de touches naturelles fait de ce centre commercial l'un des points forts de la ville. Avec de nombreuses places de stationnement et une grande variété de magasins, Santa Lucia Mall garantit une expérience de shopping animée.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Geometric",
+        environment: "Urban, Inviting",
+        features: "Geometric facade, Lush greenery, Expansive glass windows, Ample parking",
+      },
+      fr: {
+        style: "Moderne, Géométrique",
+        environment: "Urbain, Accueillant",
+        features:
+          "Façade géométrique, Verdure luxuriante, Grandes fenêtres en verre, Parking ample",
+      },
+    },
+  },
+  {
+    id: 16,
+    slug: "timoland-hotel-douala",
+    name: "TimoLand Hotel Douala",
+    year: 2023,
+    images: [
+      {
+        image: PROJECT161,
+      },
+      {
+        image: PROJECT162,
+      },
+      {
+        image: PROJECT163,
+      },
+      {
+        image: PROJECT164,
+      },
+      {
+        image: PROJECT165,
+      },
+      {
+        image: PROJECT166,
+      },
+    ],
+    services: {
+      en: ["Exterior", "Supervision", "Landscaping"],
+      fr: ["Extérieur", "Supervision", "Aménagement Paysager"],
+    },
+    serviceslug: {
+      en: ["exterior", "supervision", "landscaping"],
+      fr: ["extérieur", "supervision", "aménagement-paysager"],
+    },
+    location: {
+      en: "Douala, Cameroon",
+      fr: "Douala, Cameroun",
+    },
+    introDescription: {
+      en: "A modern hotel in the economic capital featuring sleek architecture, expansive glass windows, and vibrant green accents, offering luxury and comfort in an urban setting.",
+      fr: "Un hôtel moderne dans la capitale économique avec une architecture élégante, de grandes fenêtres en verre et des accents verts vibrants, offrant luxe et confort dans un cadre urbain.",
+    },
+    aboutProject: {
+      en: [
+        "TimoLand Hotel Douala stands as a beacon of modern hospitality with its sleek design and vibrant green accents. The hotel’s facade features expansive glass windows that flood the interiors with natural light, creating a welcoming atmosphere.",
+        "The minimalist landscaping and warm lighting enhance the building’s contemporary aesthetic. Positioned in the heart of Douala, this hotel offers a perfect blend of luxury and comfort for travelers seeking an exceptional urban experience.",
+      ],
+      fr: [
+        "TimoLand Hotel Douala se distingue par son design moderne et ses accents verts vibrants. La façade de l’hôtel présente de grandes fenêtres en verre qui inondent les intérieurs de lumière naturelle, créant une atmosphère accueillante.",
+        "L’aménagement paysager minimaliste et l’éclairage chaleureux rehaussent l’esthétique contemporaine du bâtiment. Situé au cœur de Douala, cet hôtel offre un mélange parfait de luxe et de confort pour les voyageurs en quête d’une expérience urbaine exceptionnelle.",
+      ],
+    },
+    projectInfo: {
+      en: {
+        style: "Modern, Minimalist",
+        environment: "Urban, Inviting",
+        features: "Large glass windows, Green accents, Warm lighting, Minimalistic landscaping",
+      },
+      fr: {
+        style: "Moderne, Minimaliste",
+        environment: "Urbain, Accueillant",
+        features:
+          "Grandes fenêtres en verre, Accents verts, Éclairage chaleureux, Aménagement paysager minimaliste",
       },
     },
   },

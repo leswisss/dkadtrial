@@ -58,10 +58,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = params.locale;
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   
-
   return {
     title: t("HomePage:metadatatitle"),
     description: t("HomePage:metadatadesc"),
+    applicationName: "DK Architecture & Design",
+    twitter: {
+      card: "summary_large_image"
+    }
   };
 }
 

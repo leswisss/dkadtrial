@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = ProjectsContent.find(project => project.slug === slugg);
   const title = project ? project.name : "404"
   const description = project && locale === "en" ? project.introDescription.en : project && locale === "fr" ? project.introDescription.fr : "404"
+  const image = project ? project.images[0].image.src : ""
 
   const { t, resources } = await initTranslations(
     locale,
@@ -26,10 +27,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   );
 
   return {
-    title: `${title} - ${description}`,
+    title: `${title} - DK Architecture & Design`,
     description: description,
+    openGraph: {
+      images: [
+        {
+          url: image
+        }
+      ]
+    }
   };
 }
+
 
 export default function RootLayout({
   children,

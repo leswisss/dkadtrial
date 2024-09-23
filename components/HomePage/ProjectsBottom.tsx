@@ -20,9 +20,8 @@ const ProjectsBottom = () => {
   const sortedProjects = ProjectsContent.sort((a, b) => b.year - a.year);
 
   //Select the first four projects
-  const selectedProjects = sortedProjects.slice(0, 4);
+  const selectedProjects = sortedProjects.slice(0, 5);
   const totalProjects = selectedProjects.length;
-
 
   const animateSlide = (slideNumber: number, reveal: boolean) => {
     const background = backgroundRefs.current[slideNumber];
