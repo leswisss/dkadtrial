@@ -413,7 +413,7 @@ export const ProjectsContent = [
   },
   {
     id: 4,
-    slug: "timoland-hotel-Yaounde",
+    slug: "timoland-hotel-yaounde",
     name: "TimoLand Hotel Yaounde",
     year: 2024,
     images: [
@@ -1319,169 +1319,161 @@ export const GalleryDetails = [
   {
     id: 1,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Reception of staff from the French embassy and Ministry of Culture for IFC Yaoundé’s Public Reading Center renovation.",
+      fr: "Réception du personnel de l’ambassade de France et du ministère de la Culture pour la rénovation du centre de lecture publique de l’IFC Yaoundé.",
     },
     image: GALLERY1,
   },
   {
     id: 2,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Reception of staff from the French embassy and Ministry of Culture for IFC Yaoundé’s Public Reading Center renovation.",
+      fr: "Réception du personnel de l’ambassade de France et du ministère de la Culture pour la rénovation du centre de lecture publique de l’IFC Yaoundé.",
     },
     image: GALLERY2,
   },
   {
     id: 3,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Reception of staff from the French embassy and Ministry of Culture for IFC Yaoundé’s Public Reading Center renovation.",
+      fr: "Réception du personnel de l’ambassade de France et du ministère de la Culture pour la rénovation du centre de lecture publique de l’IFC Yaoundé.",
     },
     image: GALLERY3,
   },
   {
     id: 4,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY4,
-  },
-  {
-    id: 5,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Conference meeting with French embassy and Ministry of Culture staff on IFC Yaoundé’s public reading center renovation.",
+      fr: "Réunion de conférence avec le personnel de l’ambassade de France et du ministère de la Culture sur la rénovation du centre de lecture publique de l’IFC Yaoundé.",
     },
     image: GALLERY5,
   },
   {
+    id: 5,
+    desc: {
+      en: "Reception of Yaoundé Military Court with the Minister of Defense, Secretary General, and high officers after a 2-year project.",
+      fr: "Réception du tribunal militaire de Yaoundé avec le ministre de la Défense, le secrétaire général et les hauts officiers après un projet de 2 ans.",
+    },
+    image: GALLERY4,
+  },
+  {
     id: 6,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY6,
-  },
-  {
-    id: 7,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY7,
-  },
-  {
-    id: 8,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY8,
-  },
-  {
-    id: 9,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY9,
-  },
-  {
-    id: 10,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY10,
-  },
-  {
-    id: 11,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY11,
-  },
-  {
-    id: 12,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY12,
-  },
-  {
-    id: 13,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY13,
-  },
-  {
-    id: 14,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY14,
-  },
-  {
-    id: 15,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
-    },
-    image: GALLERY15,
-  },
-  {
-    id: 16,
-    desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Supervising the Yaoundé Military Court project, ensuring quality and progress over the 2-year duration",
+      fr: "Supervision du projet du tribunal militaire de Yaoundé, assurant la qualité et le progrès sur une durée de 2 ans.",
     },
     image: GALLERY16,
   },
   {
-    id: 17,
+    id: 7,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Visit from the Director of Military Justice of Cameroon to inspect the construction site of the Military Court of Justice.",
+      fr: "Visite du directeur de la justice militaire du Cameroon pour inspecter le chantier du tribunal militaire de justice.",
+    },
+    image: GALLERY15,
+  },
+  {
+    id: 8,
+    desc: {
+      en: "Supervising the Yaoundé Military Court project, ensuring quality and progress over the 2-year duration",
+      fr: "Supervision du projet du tribunal militaire de Yaoundé, assurant la qualité et le progrès sur une durée de 2 ans.",
     },
     image: GALLERY17,
   },
   {
-    id: 18,
+    id: 9,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "In Senegal, we discussed African architecture and collaboration between African architects with the President of Senegal’s National Order of Architects.",
+      fr: "Au Sénégal, nous avons discuté de l’architecture africaine et de la collaboration entre architectes africains avec le président de l’Ordre national des architectes du Sénégal.",
     },
-    image: GALLERY18,
+    image: GALLERY6,
   },
   {
-    id: 19,
+    id: 10,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Laying the first stone for Cameroon’s first leisure center for autistic children with the Minister of Social Affairs and the Minister of Women Affairs.",
+      fr: "Pose de la première pierre du premier centre de loisirs pour enfants autistes au Cameroun avec la ministre des Affaires sociales et la ministre de la Femme.",
     },
-    image: GALLERY19,
+    image: GALLERY7,
   },
   {
-    id: 20,
+    id: 11,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Explaining the project for Cameroon’s first leisure center for autistic children to the congregation, with the Minister of Social Affairs and the Minister of Women Affairs.",
+      fr: "Explication du projet du premier centre de loisirs pour enfants autistes au Cameroun à la congrégation, avec la ministre des Affaires sociales et la ministre de la Femme.",
+    },
+    image: GALLERY8,
+  },
+  {
+    id: 12,
+    desc: {
+      en: "Supervision of a four-star hotel and mall with a gallery, ensuring all construction phases are on track during site visits.",
+      fr: "Suivi d’un hôtel quatre étoiles et d’un centre commercial avec galerie, assurant le bon déroulement de toutes les phases de construction.",
+    },
+    image: GALLERY9,
+  },
+  {
+    id: 13,
+    desc: {
+      en: "Supervision of a four-star hotel and mall with a gallery, ensuring all construction phases are on track during site visits.",
+      fr: "Suivi d’un hôtel quatre étoiles et d’un centre commercial avec galerie, assurant le bon déroulement de toutes les phases de construction.",
+    },
+    image: GALLERY11,
+  },
+  {
+    id: 14,
+    desc: {
+      en: "Supervision of a four-star hotel and mall with a gallery, ensuring all construction phases are on track during site visits.",
+      fr: "Suivi d’un hôtel quatre étoiles et d’un centre commercial avec galerie, assurant le bon déroulement de toutes les phases de construction.",
+    },
+    image: GALLERY12,
+  },
+  {
+    id: 15,
+    desc: {
+      en: "Laying of iron rods for the four-star hotel and mall project, ensuring structural integrity",
+      fr: "Pose des barres de fer pour le projet d’hôtel quatre étoiles et centre commercial, assurant l’intégrité structurelle.",
+    },
+    image: GALLERY13,
+  },
+  {
+    id: 16,
+    desc: {
+      en: "Overseeing workers on-site for the four-star hotel and mall project, ensuring all construction phases are on track.",
+      fr: "Supervision des travailleurs sur le chantier du projet d’hôtel quatre étoiles et centre commercial, assurant le bon déroulement de toutes les phases de construction.",
+    },
+    image: GALLERY14,
+  },
+  {
+    id: 17,
+    desc: {
+      en: "Discussing with the construction engineering leader for the four-star hotel and mall.",
+      fr: "Échange avec le responsable de construction pour l’hôtel quatre étoiles et le centre commercial.",
     },
     image: GALLERY20,
   },
   {
-    id: 21,
+    id: 18,
     desc: {
-      en: "Modern two-story house with wooden accents, large windows, and greenery seamlessly integrated into the overall design.",
-      fr: "Maison moderne à deux étages avec accents en bois, grandes fenêtres, et verdure intégrée parfaitement dans le design global.",
+      en: "Discussing with the construction engineering leader for the four-star hotel and mall.",
+      fr: "Échange avec le responsable de construction pour l’hôtel quatre étoiles et le centre commercial.",
     },
     image: GALLERY21,
+  },
+  {
+    id: 19,
+    desc: {
+      en: "Decking of a residential building, ensuring structural integrity and quality for future residents.",
+      fr: "Coulage de la dalle d’un bâtiment résidentiel, assurant l’intégrité structurelle et la qualité pour les futurs résidents.",
+    },
+    image: GALLERY18,
+  },
+  {
+    id: 20,
+    desc: {
+      en: "Completed residential building, showcasing modern design and high-quality construction.",
+      fr: "Bâtiment résidentiel achevé, présentant un design moderne et une construction de haute qualité.",
+    },
+    image: GALLERY19,
   },
 ];

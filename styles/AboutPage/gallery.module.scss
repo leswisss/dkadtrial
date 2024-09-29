@@ -188,7 +188,7 @@
 @media screen and (max-width: 400px) {
   .gallery__wrapper{
     .gallery__card{
-      aspect-ratio: 16/11;
+      aspect-ratio: 16/12;
 
       .gallery__content{
         background-color: rgba(0,0,0,0.2);
@@ -208,7 +208,7 @@
   .gallery__modal {
     .g__image{
       width: 90vw;
-      aspect-ratio: 16/10;
+      aspect-ratio: 16/12;
     }
   }
   
