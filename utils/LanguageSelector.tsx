@@ -84,7 +84,7 @@ export default function LanguageSelector({ setLocalState }: TransitionProps) {
   };
 
   return (
-    <div style={{ display: "flex", gap: "0.3rem" }}>
+    <div style={{ display: "flex", gap: "0.3rem", userSelect: "none" }}>
       <span
         style={{
           opacity: currentLocale === "en" ? "0.5" : "1",

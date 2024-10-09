@@ -61,7 +61,7 @@ const Navbar = ({ lang, animationFinished, setLocalState }: { lang: string, anim
             ? styles.navigation
             : `${styles.navigation} ${styles.navigation__black}`
         }
-        style={{opacity: animationFinished ? 1 : 0, transition: "opacity 0.7s cubic-bezier(0.7,0,0.3,1)", transitionDelay: "1s"}}
+        style={{opacity: animationFinished ? 1 : 0, transition: "opacity 0.7s cubic-bezier(0.7,0,0.3,1)", transitionDelay: "1s", userSelect: "none"}}
       >
         <div
           className={styles.backdrop}
