@@ -57,7 +57,7 @@ const Footer = () => {
   const pro_trans = t("projets");
   const about_trans = t("apropos");
   const serv_trans = "Services";
-  const gall_trans = t("gallery")
+  const gall_trans = t("gallery");
 
   const navigation__menu = [about_trans, serv_trans, contact_trans, pro_trans];
 
@@ -259,7 +259,14 @@ const Footer = () => {
             <div className={styles.menu}>
               <span className={styles.nav_header}>{t("explore")}</span>
               <div className={styles.footer__links}>
-                <Link href={`${currentLocale==="fr" ? "/fr/galerie": "/en/gallery"}`} className={styles.footer__link}>{gall_trans}</Link>
+                <Link
+                  href={`${
+                    currentLocale === "fr" ? "/fr/galerie" : "/en/gallery"
+                  }`}
+                  className={styles.footer__link}
+                >
+                  {gall_trans}
+                </Link>
               </div>
             </div>
           </div>
@@ -310,7 +317,9 @@ const Footer = () => {
                     onClick={() => setActiveBetter(false)}
                   />
                   <Magnetic>
-                    <Link href="https://wa.me/+237693370638">{t("Navigation:contact")}</Link>
+                    <Link href="https://wa.me/+237693370638">
+                      {t("Navigation:contact")}
+                    </Link>
                   </Magnetic>
                 </div>
               </div>
@@ -340,10 +349,19 @@ const Footer = () => {
                   }}
                   ref={footerRef}
                 >
-                  <Link href="https://www.bettermarque.com" className={styles.coming}>{t("Navigation:website")}</Link>
+                  <Link
+                    href="https://www.bettermarque.com"
+                    className={styles.coming}
+                  >
+                    {t("Navigation:website")}
+                  </Link>
                   <div className={styles.button}>
-                    <Link href="https://www.instagram.com/bettermarque/">Instagram</Link>
-                    <Link href="https://web.facebook.com/profile.php?id=61555159313413">Facebook</Link>
+                    <Link href="https://www.instagram.com/bettermarque/">
+                      Instagram
+                    </Link>
+                    <Link href="https://web.facebook.com/profile.php?id=61555159313413">
+                      Facebook
+                    </Link>
                   </div>
                 </div>
               </div>

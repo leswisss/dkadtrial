@@ -1,0 +1,236 @@
+.hero__section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .image__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    .himage__fill {
+      width: 100%;
+      height: 130%;
+
+      img {
+        object-fit: cover;
+        object-position: 0% 70%;
+        filter: brightness(90%);
+      }
+    }
+  }
+
+  .hero__container {
+    z-index: 1;
+    height: 100%;
+    position: relative;
+
+    .hero__text {
+      width: 51rem;
+      position: absolute;
+      bottom: 23%;
+      left: 0;
+      display: flex;
+      column-gap: 0.7rem;
+      flex-wrap: wrap;
+
+      p {
+        font-size: 3.8rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+
+        .span__overflow {
+          .span__span {
+            position: relative;
+            display: block;
+            transform: translateY(-100%);
+          }
+        }
+
+        .trademark {
+          font-size: var(--small-font-size);
+          font-family: var(--font-medium);
+          position: relative;
+          display: block;
+          transform: translateY(65%);
+          overflow: hidden;
+
+          .trademark__main {
+            display: block;
+            transform: translateY(-100%);
+          }
+        }
+      }
+    }
+
+    .hero__footer {
+      width: 100%;
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        text-transform: uppercase;
+        font-size: var(--smaller-font-size);
+        &:nth-of-type(1) {
+          cursor: pointer;
+          clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+        }
+
+        &:nth-of-type(2) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+        }
+
+        &:nth-of-type(3) {
+          clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+        }
+      }
+    }
+  }
+}
+
+//RESPONSIVE DESIGN
+
+@media screen and (max-width: 950px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 45rem;
+        bottom: 23%;
+
+        p {
+          font-size: 3.3rem;
+
+          .trademark {
+            font-size: var(--small-font-size);
+            transform: translateY(50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 40rem;
+        bottom: 23%;
+
+        p {
+          font-size: 2.9rem;
+
+          .trademark {
+            font-size: var(--small-font-size);
+            transform: translateY(40%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 36rem;
+        bottom: 17%;
+
+        p {
+          font-size: 2.6rem;
+        }
+      }
+    }
+
+    .image__wrapper {
+      .himage__fill {
+        img {
+          object-fit: cover;
+          filter: brightness(70%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 31rem;
+        column-gap: 0.6rem;
+
+        p {
+          font-size: 2.2rem;
+
+          .trademark {
+            font-size: var(--smaller-font-size);
+            transform: translateY(45%);
+          }
+        }
+      }
+
+      .hero__footer {
+        bottom: 5%;
+
+        span {
+          font-size: var(--smaller-font-size);
+
+          &:nth-of-type(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 27rem;
+
+        p {
+          font-size: clamp(1.95rem, 4.2vw, 3.75rem);
+          line-height: 1.2;
+
+          .trademark {
+            font-size: calc(var(--smaller-font-size) - 0.1rem);
+            transform: translateY(40%);
+            font-family: var(--semiBold-font);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero__section {
+    .hero__container {
+      .hero__text {
+        width: 100%;
+      }
+    }
+  }
+}
