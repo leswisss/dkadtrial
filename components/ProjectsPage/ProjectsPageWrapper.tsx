@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from "react-i18next";
-import Lenis from "@studio-freight/lenis";
 import IMAGE from "../../public/images/footerr1.jpg"
 import { ProjectsHero, ProjectContent, FooterReusable, Navbar, Preloader2 } from '..'
 
@@ -10,20 +9,6 @@ import { ProjectsHero, ProjectContent, FooterReusable, Navbar, Preloader2 } from
 const ProjectsPageWrapper = () => {
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
 
   //Preloader Animation
   const [imageLoaded, setImageLoaded] = useState(false);

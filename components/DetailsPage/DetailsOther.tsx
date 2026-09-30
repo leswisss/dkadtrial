@@ -1,5 +1,11 @@
 "use client";
 
+// This file intentionally keeps its original implementation (per-project slide
+// hooks called inside a .map callback). It is the last known-good state of this
+// carousel: an extracted-component refactor caused a React hydration error and
+// a broken (0-slide) Swiper. Do not refactor without a verified browser test.
+/* eslint-disable react-hooks/rules-of-hooks */
+
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Icon } from "@iconify/react";
@@ -7,7 +13,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { TitleReusable } from "..";
-import {swiperSettings, ProjectsContent} from "@/utils";
+import { swiperSettings, ProjectsContent } from "@/utils";
 import { ProjectProps } from "@/types";
 import { useTranslation } from "react-i18next";
 import styles from "../../styles/DetailsPage/other.module.scss";
@@ -15,9 +21,15 @@ import styles from "../../styles/DetailsPage/other.module.scss";
 // Import Swiper styles
 import "swiper/css";
 
-const DetailsOther = ({currentProject, currentLocale}: {currentProject: ProjectProps | undefined | null; currentLocale: string }) => {
+const DetailsOther = ({
+  currentProject,
+  currentLocale,
+}: {
+  currentProject: ProjectProps | undefined | null;
+  currentLocale: string;
+}) => {
   const projectName = currentProject ? currentProject.name : "";
-  
+
   // //Function to get other Projects
   // const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
   //   const currentList = name ? list.filter(project => project.name !== name) : []
@@ -29,32 +41,32 @@ const DetailsOther = ({currentProject, currentLocale}: {currentProject: ProjectP
   // const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
 
   // Function to get other Projects
-const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
-  if (!name) return [];
+  const getOtherProjects = (name: string | undefined, list: ProjectProps[]) => {
+    if (!name) return [];
 
-  // Find the index of the current project
-  const currentIndex = list.findIndex(project => project.name === name);
-  if (currentIndex === -1) return [];
+    // Find the index of the current project
+    const currentIndex = list.findIndex((project) => project.name === name);
+    if (currentIndex === -1) return [];
 
-  // Get projects after the current project
-  const projectsAfter = list.slice(currentIndex + 1);
+    // Get projects after the current project
+    const projectsAfter = list.slice(currentIndex + 1);
 
-  // If there are 5 or more projects after, return the first 5
-  if (projectsAfter.length >= 5) {
-    return projectsAfter.slice(0, 5);
-  }
+    // If there are 5 or more projects after, return the first 5
+    if (projectsAfter.length >= 5) {
+      return projectsAfter.slice(0, 5);
+    }
 
-  // If there are less than 5 projects after, get the remaining projects from before
-  const projectsBefore = list.slice(0, currentIndex);
-  const remainingCount = 5 - projectsAfter.length;
+    // If there are less than 5 projects after, get the remaining projects from before
+    const projectsBefore = list.slice(0, currentIndex);
+    const remainingCount = 5 - projectsAfter.length;
 
-  // Combine projects after and the required number of projects before
-  return [...projectsAfter, ...projectsBefore.slice(-remainingCount)];
-};
+    // Combine projects after and the required number of projects before
+    return [...projectsAfter, ...projectsBefore.slice(-remainingCount)];
+  };
 
-const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
+  const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
 
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [offset, setOffset] = useState(0);
   const [lastSlide, setLastSlide] = useState(false);
@@ -85,12 +97,14 @@ const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
       </div>
     );
   };
-  
 
   return (
     <section className={`section ${styles.other__section}`}>
       <div className={`container ${styles.other__container}`}>
-        <TitleReusable title={t("DetailsPage:otherheader")} text={t("DetailsPage:othertext", { projectName })}/>
+        <TitleReusable
+          title={t("DetailsPage:otherheader")}
+          text={t("DetailsPage:othertext", { projectName })}
+        />
         <Swiper
           className={styles.other__swiper}
           {...swiperSettings}
@@ -122,7 +136,11 @@ const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
               <SwiperSlide className={styles.other__slide} key={i}>
                 <Link
                   className={styles.other__content}
-                  href={currentLocale === "en" ? `/en/projects/${data?.slug}` : `/fr/projets/${data?.slug}`}
+                  href={
+                    currentLocale === "en"
+                      ? `/en/projects/${data?.slug}`
+                      : `/fr/projets/${data?.slug}`
+                  }
                   onMouseEnter={() => setActive(true)}
                   onMouseLeave={() => setActive(false)}
                 >
@@ -140,7 +158,7 @@ const otherProjects = getOtherProjects(currentProject?.name, ProjectsContent);
                           src={data.images[0].image}
                           fill
                           quality={100}
-                          alt= {projectName}
+                          alt={projectName}
                           style={{ objectPosition: `${offset}% center` }}
                         />
                       </motion.div>

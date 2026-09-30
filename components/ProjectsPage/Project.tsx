@@ -32,6 +32,7 @@ const Project = ({ data, currentLocale }: { data: ProjectProps, currentLocale: s
             src={data.images[0].image}
             fill
             quality={100}
+            sizes="100vw"
             alt={data.name}
           />
         </motion.div>

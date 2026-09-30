@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import initTranslations from "../i18n";
 import { Footer } from "@/components";
 import TranslationsProvider from "@/utils/TranslationsProvider";
+import { SmoothScrollProvider } from "@/utils/SmoothScroll";
 import { Analytics } from "@vercel/analytics/react"
 import "../../styles/globals.scss"
 
@@ -59,12 +60,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   
   return {
+    metadataBase: new URL("https://dkadstudio.com"),
     title: t("HomePage:metadatatitle"),
     description: t("HomePage:metadatadesc"),
     applicationName: "DK Architecture & Design",
     twitter: {
-      card: "summary_large_image"
-    }
+      card: "summary_large_image",
+    },
   };
 }
 
@@ -85,14 +87,16 @@ export default async function RootLayout({
       <body
         className={`${light.variable} ${regular.variable} ${medium.variable} ${semiBold.variable} ${bold.variable}`}
       >
-        <TranslationsProvider
-          resources={resources}
-          locale={params.locale}
-          namespaces={i18nNamespaces}
-        >
-          {children}
-          <Footer/>
-        </TranslationsProvider>
+        <SmoothScrollProvider>
+          <TranslationsProvider
+            resources={resources}
+            locale={params.locale}
+            namespaces={i18nNamespaces}
+          >
+            {children}
+            <Footer/>
+          </TranslationsProvider>
+        </SmoothScrollProvider>
         <Analytics />
       </body>
     </html>

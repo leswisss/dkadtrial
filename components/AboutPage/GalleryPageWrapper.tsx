@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Lenis from "@studio-freight/lenis";
 import { useTranslation } from "react-i18next";
 import { Navbar, Preloader2 } from "..";
 import GalleryHero from "./GalleryHero";
@@ -9,19 +8,6 @@ import GalleryHero from "./GalleryHero";
 const GalleryPageWrapper = () => {
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   //Preloader Animation
   const [imageLoaded, setImageLoaded] = useState(false);

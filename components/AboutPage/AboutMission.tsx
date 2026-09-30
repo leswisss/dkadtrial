@@ -181,7 +181,7 @@ const AboutMission = () => {
     <section className={`${styles.mission__section}`}>
       <div className={styles.image__overflow} ref={container}>
         <motion.div className={styles.mission__image} style={{ y }}>
-          <Image src={IMAGE} alt="Landscape Image" fill quality={100} />
+          <Image src={IMAGE} alt="Landscape Image" fill quality={100} sizes="100vw" />
         </motion.div>
       </div>
       <div className={`container ${styles.mission__container}`}>
@@ -259,7 +259,7 @@ const AboutMission = () => {
                   </div>
                   <div className={styles.p__text}>
                     {ValuesData.map((data, i) => (
-                      <div className={styles.pp__text}>
+                      <div className={styles.pp__text} key={i}>
                         {splitwordSpecial(data.text, i)}
                       </div>
                     ))}

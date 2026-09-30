@@ -1,31 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from 'react'
-import Lenis from "@studio-freight/lenis";
 import { useTranslation } from "react-i18next";
 import IMAGE from "../../public/images/services.jpg"
 import { AboutHero, AboutMission, AboutTeam, FooterReusable, Navbar, Preloader2 } from '..'
+import { useLenis } from "@/utils/SmoothScroll";
 
 const AboutPageWrapper = () => {
-  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const lenis = useLenis();
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-    
-    // Store the lenis instance in state
-    setLenis(lenisInstance);
-  }, []);
 
 
   //Preloader Animation

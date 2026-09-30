@@ -77,7 +77,7 @@ const Footer = () => {
           <p
             ref={(el) => el && refs.current.push(el)}
             className={`${styles.word} ${
-              word === "Better" || word === "Marque" || word === "Marque's"
+              word === "BetterMarque" || word === "SARL" || word === "SARL's"
                 ? styles.highlight
                 : ""
             }`}
@@ -96,7 +96,7 @@ const Footer = () => {
     const tl2 = gsap.timeline();
 
     //TL 1
-    tl.to(betterRef.current, {
+    (tl.to(betterRef.current, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "power4.inOut",
       duration: 0.7,
@@ -119,7 +119,7 @@ const Footer = () => {
           stagger: 0.008,
         },
         ">"
-      );
+      ));
 
     tl.to(
       footerRef.current,
@@ -132,7 +132,7 @@ const Footer = () => {
     );
 
     //TL 2
-    tl2.to(betterRef.current, {
+    (tl2.to(betterRef.current, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       ease: "power4.inOut",
       duration: 0.7,
@@ -154,7 +154,7 @@ const Footer = () => {
           stagger: 0.008,
         },
         "<"
-      );
+      ));
 
     tl2.to(
       footerRef.current,
@@ -288,7 +288,7 @@ const Footer = () => {
                   className={styles.underline}
                   onClick={() => setActiveBetter(true)}
                 >
-                  Better Marque
+                  BetterMarque SARL
                 </span>
               </span>
             </div>

@@ -94,7 +94,7 @@ const HomeAbout = ({
                     quality={100}
                     loading="eager"
                     onClick={() => setActiveImage(0)}
-                    sizes="(max-width: 600px) 100%, 100%"
+                    sizes="(max-width: 600px) 100vw, 50vw"
                   />
                 </div>
               </div>
@@ -120,7 +120,7 @@ const HomeAbout = ({
                         alt="Interior Design"
                         fill
                         quality={100}
-                        sizes="(max-width: 600px) 100%, 100%"
+                        sizes="(max-width: 600px) 100vw, 25vw"
                       />
                     </div>
                   </div>

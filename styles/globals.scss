@@ -246,3 +246,18 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/*=============== ACCESSIBILITY ===============*/
+/* Respect users who prefer reduced motion: collapse CSS animations,
+   transitions and smooth scrolling. JS-driven timelines still need
+   per-component guards (documented in PERFORMANCE_AUDIT.md). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

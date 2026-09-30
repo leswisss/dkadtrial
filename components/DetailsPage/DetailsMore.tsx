@@ -6,15 +6,65 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import { ProjectProps, ImageProps } from "@/types";
 import styles from "../../styles/DetailsPage/more.module.scss";
 
-const DetailsMore = ({currentProject, currentLocale}: {currentProject: ProjectProps | null | undefined; currentLocale: string }) => {
-  const [transform, setTransform] = useState(-150)
+//Images code
+const getLastFourElements = (list: ImageProps[] | undefined) => {
+  if (!list) {
+    return [];
+  }
+
+  if (list.length >= 4) {
+    return [...list.slice(-4)].reverse();
+  }
+
+  // Return a reversed copy of the list if it has less than 4 elements
+  return [...list].reverse();
+};
+
+const MoreImage = ({
+  data,
+  transform,
+}: {
+  data: ImageProps;
+  transform: number;
+}) => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [transform, 0]);
+
+  return (
+    <div className={styles.more__wrapper} ref={container}>
+      <motion.div className={styles.more__image} style={{ y }}>
+        <Image
+          src={data.image}
+          quality={100}
+          alt="Project Image"
+          fill
+          sizes="100vw"
+        />
+      </motion.div>
+    </div>
+  );
+};
+
+const DetailsMore = ({
+  currentProject,
+  currentLocale,
+}: {
+  currentProject: ProjectProps | null | undefined;
+  currentLocale: string;
+}) => {
+  const [transform, setTransform] = useState(-150);
 
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== 'undefined' && window.innerWidth < 550) {
-        setTransform(-75)
+      if (typeof window !== "undefined" && window.innerWidth < 550) {
+        setTransform(-75);
       } else {
-        setTransform(-120)
+        setTransform(-120);
       }
     };
 
@@ -27,48 +77,14 @@ const DetailsMore = ({currentProject, currentLocale}: {currentProject: ProjectPr
     };
   }, []);
 
-  //Images code
-  const getLastFourElements = (list:ImageProps[] | undefined) => {
-    if (!list) {
-      return [];
-    }
-  
-    if (list.length >= 4) {
-      return [...list.slice(-4)].reverse();
-    }
-  
-    // Return a reversed copy of the list if it has less than 4 elements
-    return [...list].reverse();
-  };
+  const imagesList = getLastFourElements(currentProject?.images);
 
-  const imagesList = getLastFourElements(currentProject?.images)
-  
   return (
     <section className={`section ${styles.more__section}`}>
       <div className={`container ${styles.more__container}`}>
-        {imagesList.map((data, i) => {
-          const container = useRef(null);
-          const { scrollYProgress } = useScroll({
-            target: container,
-
-            offset: ["start end", "end start"],
-          });
-
-          const y = useTransform(scrollYProgress, [0, 1], [transform, 0]);
-
-          return (
-            <div className={styles.more__wrapper} ref={container} key={i}>
-              <motion.div className={styles.more__image} style={{ y }}>
-                <Image
-                  src={data.image}
-                  quality={100}
-                  alt="Project Image"
-                  fill
-                />
-              </motion.div>
-            </div>
-          );
-        })}
+        {imagesList.map((data, i) => (
+          <MoreImage key={i} data={data} transform={transform} />
+        ))}
       </div>
     </section>
   );

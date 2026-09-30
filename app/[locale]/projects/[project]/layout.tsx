@@ -26,13 +26,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     i18nNamespaces
   );
 
+  const ogImage = image
+    ? new URL(image, "https://dkadstudio.com").toString()
+    : "";
+
   return {
+    metadataBase: new URL("https://dkadstudio.com"),
     title: `${title} - DK Architecture & Design`,
     description: description,
     openGraph: {
       images: [
         {
-          url: image
+          url: ogImage
         }
       ]
     }

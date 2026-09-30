@@ -6,27 +6,65 @@ import { ProjectProps } from "@/types";
 import { useInView } from "react-intersection-observer";
 import styles from "../../styles/DetailsPage/details.module.scss";
 
-const DetailsDetails = ({currentProject, currentLocale}: {currentProject: ProjectProps | null | undefined ; currentLocale: string}) => {
-  const { t, i18n } = useTranslation();
+const splitwords = (phrase: string, condition: boolean) => {
+  let body: JSX.Element[] = [];
+  phrase.split(" ").forEach((word, i) => {
+    body.push(
+      <p key={`word-${i}`}>
+        <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
+      </p>
+    );
+  });
 
-  const splitwords = (phrase: string, condition: boolean) => {
-    let body: JSX.Element[] = [];
-    phrase.split(" ").forEach((word, i) => {
-      body.push(
-        <p key={`word-${i}`}>
-          <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
-        </p>
-      );
-    });
+  return body;
+};
 
-    return body;
-  };
+const PhraseLine = ({ data }: { data: string }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
-  const phrases = currentProject && currentLocale === "en" ? currentProject.aboutProject.en : currentProject && currentLocale === "fr" ? currentProject.aboutProject.fr : null
-  const archiStyle = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.style : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.style : null;
-  const archiEnvironment = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.environment : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.environment : null;
-  const archiFeatures = currentProject && currentLocale === "en" ? currentProject.projectInfo.en.features : currentProject && currentLocale === "fr" ? currentProject.projectInfo.fr.features : null;
+  return (
+    <div className={styles.a__text} ref={ref}>
+      {splitwords(data, inView)}
+    </div>
+  );
+};
 
+const DetailsDetails = ({
+  currentProject,
+  currentLocale,
+}: {
+  currentProject: ProjectProps | null | undefined;
+  currentLocale: string;
+}) => {
+  const { t } = useTranslation();
+
+  const phrases =
+    currentProject && currentLocale === "en"
+      ? currentProject.aboutProject.en
+      : currentProject && currentLocale === "fr"
+      ? currentProject.aboutProject.fr
+      : null;
+  const archiStyle =
+    currentProject && currentLocale === "en"
+      ? currentProject.projectInfo.en.style
+      : currentProject && currentLocale === "fr"
+      ? currentProject.projectInfo.fr.style
+      : null;
+  const archiEnvironment =
+    currentProject && currentLocale === "en"
+      ? currentProject.projectInfo.en.environment
+      : currentProject && currentLocale === "fr"
+      ? currentProject.projectInfo.fr.environment
+      : null;
+  const archiFeatures =
+    currentProject && currentLocale === "en"
+      ? currentProject.projectInfo.en.features
+      : currentProject && currentLocale === "fr"
+      ? currentProject.projectInfo.fr.features
+      : null;
 
   return (
     <section className={`section ${styles.details__section}`}>
@@ -37,13 +75,9 @@ const DetailsDetails = ({currentProject, currentLocale}: {currentProject: Projec
             <span className={styles.title__text}>{t("DetailsPage:about")}</span>
           </div>
           <div className={styles.about__content}>
-            {phrases?.map((data, i) => {
-              const { ref, inView } = useInView({
-                threshold: 0.2,
-                triggerOnce: true,
-              });
-              return <div key={i} className={styles.a__text} ref={ref}>{splitwords(data, inView)}</div>;
-            })}
+            {phrases?.map((data, i) => (
+              <PhraseLine key={i} data={data} />
+            ))}
           </div>
         </div>
         <div className={styles.d__top}>
@@ -65,9 +99,7 @@ const DetailsDetails = ({currentProject, currentLocale}: {currentProject: Projec
                 <p className={styles.ac__header}>
                   {t("DetailsPage:environment")}
                 </p>
-                <p className={styles.ac__content}>
-                  {archiEnvironment}
-                </p>
+                <p className={styles.ac__content}>{archiEnvironment}</p>
               </div>
             </div>
             <div className={styles.ac__bottom}>
@@ -75,9 +107,7 @@ const DetailsDetails = ({currentProject, currentLocale}: {currentProject: Projec
                 <p className={styles.ac__header}>
                   {t("DetailsPage:characteristics")}
                 </p>
-                <p className={styles.ac__content}>
-                  {archiFeatures}
-                </p>
+                <p className={styles.ac__content}>{archiFeatures}</p>
               </div>
             </div>
           </div>

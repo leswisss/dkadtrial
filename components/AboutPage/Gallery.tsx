@@ -35,6 +35,7 @@ const Gallery = ({ currentLocale }: { currentLocale: string }) => {
                 src={data.image}
                 fill
                 quality={100}
+                sizes="(max-width: 800px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 alt={currentLocale === "fr" ? data.desc.fr : data.desc.en}
               />
             </div>
@@ -54,6 +55,7 @@ const Gallery = ({ currentLocale }: { currentLocale: string }) => {
             src={GalleryDetails[activeModal.index].image}
             fill
             quality={100}
+            sizes="(max-width: 800px) 90vw, (max-width: 1024px) 70vw, 60vw"
             alt="Swiss"
           />
           <span

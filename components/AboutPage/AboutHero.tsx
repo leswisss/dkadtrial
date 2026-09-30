@@ -8,6 +8,33 @@ import gsap from "gsap";
 import styles from "../../styles/AboutPage/abouthero.module.scss";
 
 
+const splitwords = (phrase: string, condition: boolean) => {
+  let body: JSX.Element[] = [];
+  phrase.split(" ").forEach((word, i) => {
+    body.push(
+      <p key={`word-${i}`}>
+        <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
+      </p>
+    );
+  });
+
+  return body;
+};
+
+const ContentLine = ({ data }: { data: string }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  return (
+    <div className={styles.content__one} ref={ref}>
+      {splitwords(data, inView)}
+    </div>
+  );
+};
+
+
 interface AboutInterface {
   setImageLoaded: React.Dispatch<React.SetStateAction<boolean>>;
   animationFinished: boolean
@@ -20,19 +47,6 @@ const AboutHero = ({setImageLoaded, animationFinished}: AboutInterface) => {
   const text2 = t("AboutPage:pointofview2")
 
   const content = [text1, text2];
-
-  const splitwords = (phrase: string, condition: boolean) => {
-    let body: JSX.Element[] = [];
-    phrase.split(" ").forEach((word, i) => {
-      body.push(
-        <p key={`word-${i}`}>
-          <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
-        </p>
-      );
-    });
-
-    return body;
-  };
 
 
   //Preloader Animations
@@ -99,18 +113,9 @@ const AboutHero = ({setImageLoaded, animationFinished}: AboutInterface) => {
               </span>
             </div>
             <div className={styles.about__content}>
-              {content.map((data, i) => {
-                const { ref, inView } = useInView({
-                  threshold: 0.2,
-                  triggerOnce: true,
-                });
-
-                return (
-                  <div className={styles.content__one} key={i} ref={ref}>
-                    {splitwords(data, inView)}
-                  </div>
-                );
-              })}
+              {content.map((data, i) => (
+                <ContentLine key={i} data={data} />
+              ))}
             </div>
           </div>
           <WhoWeAre />

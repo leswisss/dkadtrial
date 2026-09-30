@@ -96,7 +96,7 @@ const Accordion = ({
           <div className={styles.a__data}>
             <div className={styles.image__wrapper} ref={container}>
               <motion.div className={styles.image} style={{ y }}>
-                <Image src={IMAGE} fill alt="Donfack CEO" quality={100} />
+                <Image src={IMAGE} fill alt="Donfack CEO" quality={100} sizes="(max-width: 900px) 100vw, 45vw" />
               </motion.div>
             </div>
             {currentLocale === "fr" ? (

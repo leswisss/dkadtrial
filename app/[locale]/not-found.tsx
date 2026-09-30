@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import Image from "next/image";
 import { Rounded, Preloader2 } from "@/components";
-import Lenis from "@studio-freight/lenis";
 import IMAGE from "../../public/images/broken.jpg";
 
 import styles from "../../styles/notfound.module.scss";
@@ -207,20 +206,7 @@ const NotFoundPage = () => {
     };
   }, [animationFinished]);
 
-  //SmoothScroll
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
+  //SmoothScroll provided by root SmoothScrollProvider
   return (
     <div className="main">
       <Preloader2

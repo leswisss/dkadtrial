@@ -87,6 +87,7 @@ const ContactHero = ({
                 src={IMAGE}
                 fill
                 quality={100}
+                sizes="(max-width: 900px) 100vw, 60vw"
                 alt="Location"
                 priority
                 loading="eager"

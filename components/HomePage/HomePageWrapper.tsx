@@ -15,29 +15,13 @@ import {
   Navbar,
   Preloader2,
 } from "..";
-import Lenis from "@studio-freight/lenis";
+import { useLenis } from "@/utils/SmoothScroll";
 
 const HomePageWrapper = () => {
-  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const lenis = useLenis();
   const homeAboutRef = useRef(null);
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Store the lenis instance in state
-    setLenis(lenisInstance);
-  }, []);
 
   //PRELOADER DATA
   const [imageLoaded, setImageLoaded] = useState(false);

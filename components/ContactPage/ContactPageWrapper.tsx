@@ -9,7 +9,6 @@ import {
   Navbar,
   Preloader2
 } from "..";
-import Lenis from "@studio-freight/lenis";
 import { useTranslation } from "react-i18next";
 import IMAGE from "../../public/images/footerr6.jpg";
 import IMAGE2 from "../../public/images/reusable.jpg";
@@ -19,19 +18,6 @@ import IMAGE4 from "../../public/images/reusablemobile.jpg";
 const ContactPageWrapper = () => {
   const { t, i18n } = useTranslation();
   const currentlocale = i18n.language;
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   //Footer Reusable data
   const footerData = {

@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'next/navigation';
 import IMAGE from "../../public/images/footerr3.jpg"
 import { ProjectsContent } from '@/utils';
-import Lenis from "@studio-freight/lenis";
 import { DetailsHero, DetailsImages, DetailsDetails, DetailsMore, DetailsOther, FooterReusable, Navbar, Preloader2  } from '..'
 
 const DetailsPageWrapper = () => {
@@ -23,19 +22,6 @@ const DetailsPageWrapper = () => {
   if (!currentProject) {
     notFound()
   }
-
-  useEffect(() => {
-    const lenisInstance = new Lenis({
-      duration: 2,
-    });
-
-    function raf(time: number) {
-      lenisInstance.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   //Preloader Animation
   const [imageLoaded, setImageLoaded] = useState(false);

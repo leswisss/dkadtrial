@@ -100,7 +100,7 @@ const DetailsImages = ({setImageLoaded, animationFinished, currentProject}: Deta
               key={i}
               ref={(el) => (backgroundRefs.current[i] = el)}
             >
-              <Image src={data.image} fill quality={100} alt="Project Image" onLoad={() => setImageLoaded(true)}/>
+              <Image src={data.image} fill priority={i === 0} quality={100} alt="Project Image" onLoad={() => setImageLoaded(true)}/>
             </motion.div>
           ))}
         </div>
