@@ -45,8 +45,9 @@
               span {
                 line-height: 1;
                 position: relative;
-                top: -100%;
-                transition: top 0.5s linear;
+                transform: translateY(-100%);
+                transition: transform 0.5s linear;
+                display: block;
               }
             }
           }
@@ -251,5 +252,3 @@
     }
   }
 }
-
-

@@ -59,7 +59,13 @@ const FooterReusable = ({ data }: { data: DataProps }) => {
     phrase.split(" ").forEach((word, i) => {
       body.push(
         <p key={`word-${i}`}>
-          <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
+          <span
+            style={{
+              transform: condition ? "translateY(0%)" : "translateY(-100%)",
+            }}
+          >
+            {word}
+          </span>
         </p>
       );
     });

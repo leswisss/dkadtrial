@@ -45,8 +45,9 @@
           position: relative;
           font-size: var(--h2-font-size);
           line-height: 1.15;
-          top: -100%;
-          transition: top 0.5s linear;
+          transform: translateY(-100%);
+          transition: transform 0.5s linear;
+          display: block;
         }
       }
     }

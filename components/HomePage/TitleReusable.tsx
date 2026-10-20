@@ -2,21 +2,26 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import styles from "../../styles/HomePage/textreusable.module.scss"
+import styles from "../../styles/HomePage/textreusable.module.scss";
 
-
-const TitleReusable = ({title, text, classNames}: {title: string, text: string, classNames?: string}) => {
+const TitleReusable = ({
+  title,
+  text,
+  classNames,
+}: {
+  title: string;
+  text: string;
+  classNames?: string;
+}) => {
   //Text Animation
   const { ref: ref, inView: inView } = useInView({
     threshold: 0.2,
     triggerOnce: true,
   });
 
-  const firstDivRef = useRef<HTMLDivElement>(null); 
+  const firstDivRef = useRef<HTMLDivElement>(null);
 
-
-  const [width, setWidth] = useState(0); 
-
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,35 +29,49 @@ const TitleReusable = ({title, text, classNames}: {title: string, text: string, 
         const divWidth = firstDivRef.current.offsetWidth;
         setWidth(divWidth);
       }
-    }
+    };
 
-    handleResize()
+    handleResize();
 
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize)
-    }
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
 
   const splitwords = (phrase: string, condition: boolean) => {
     let body: JSX.Element[] = [];
     phrase.split(" ").forEach((word, i) => {
-      body.push(<p key={`word-${i}`} className={styles.para}><span style={{top: condition ? "0%" : "-100%"}} >{word}</span></p>);
+      body.push(
+        <p key={`word-${i}`} className={styles.para}>
+          <span
+            style={{
+              transform: condition ? "translateY(0%)" : "translateY(-100%)",
+            }}
+            className={styles.spanner}
+          >
+            {word}
+          </span>
+        </p>
+      );
     });
 
     return body;
   };
 
   return (
-    <div className={`${styles.section__header } ${classNames}`} style={{width: `${width + 70}px`}}>
+    <div
+      className={`${styles.section__header} ${classNames}`}
+      style={{ width: `${width + 70}px` }}
+    >
       <div className="header__overflow" ref={ref}>
-        <div className={`large__font ${styles.larger__font}`} ref={firstDivRef}>{splitwords(title, inView)}</div>
+        <div className={`large__font ${styles.larger__font}`} ref={firstDivRef}>
+          {splitwords(title, inView)}
+        </div>
       </div>
-      <p className="p__font">
-        {text}
-      </p>
+      <p className="p__font">{text}</p>
     </div>
   );
 };

@@ -3,10 +3,10 @@
 
   span {
     position: relative;
-    line-height: 1;
-    text-transform: capitalize;
-    top: -100%;
-    transition: top 0.5s linear;
+    line-height: 1.15;
+    transform: translateY(-100%);
+    transition: transform 0.5s linear;
+    display: block;
   }
 }
 

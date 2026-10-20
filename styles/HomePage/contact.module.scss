@@ -28,8 +28,9 @@
             position: relative;
             font-size: var(--h1-font-size);
             line-height: 1;
-            top: -100%;
-            transition: top 0.5s linear;
+            transform: translateY(-100%);
+            transition: transform 0.5s linear;
+            display: block;
 
             &.text__fade {
               opacity: 0.5;
@@ -70,8 +71,9 @@
             position: relative;
             font-size: var(--h1-font-size);
             line-height: 1;
-            top: -100%;
-            transition: top 0.5s linear;
+            transform: translateY(-100%);
+            transition: transform 0.5s linear;
+            display: block;
 
             &.text__fade {
               opacity: 0.5;

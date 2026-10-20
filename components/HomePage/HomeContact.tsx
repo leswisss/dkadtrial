@@ -7,13 +7,12 @@ import { Rounded } from "..";
 import styles from "../../styles/HomePage/contact.module.scss";
 
 const HomeContact = () => {
-
   const { t, i18n } = useTranslation();
   const currentLocale = i18n.language;
 
   const text1 = t("HomePage:contactone");
   const text2 = t("HomePage:contacttwo");
-  const text3 = t("HomePage:contactthree")
+  const text3 = t("HomePage:contactthree");
 
   //Text Animation
   const { ref: ref, inView: inView } = useInView({
@@ -38,11 +37,12 @@ const HomeContact = () => {
         <p key={`word-${i}`} className={styles.overflow}>
           <span
             className={
-              word === "conception" || word === "design" ? styles.text__fade : ""
+              word === "conception" || word === "design"
+                ? styles.text__fade
+                : ""
             }
             style={{
-              top: condition ? "0%" : "-100%",
-              transition: "top 0.5s linear",
+              transform: condition ? "translateY(0%)" : "translateY(-100%)",
             }}
           >
             {word}
@@ -53,7 +53,6 @@ const HomeContact = () => {
 
     return body;
   };
-
 
   return (
     <section className={`section ${styles.contact__section}`}>
@@ -67,13 +66,11 @@ const HomeContact = () => {
             {splitwords(text2, inView2)}
           </div>
           <div className={styles.mobile__top} ref={ref3}>
-          {splitwords(text3, inView3)}
+            {splitwords(text3, inView3)}
           </div>
         </div>
         <div className={styles.contact__mid}>
-          <p>
-            {t("HomePage:contacttext")}
-          </p>
+          <p>{t("HomePage:contacttext")}</p>
         </div>
         <div className={styles.button}>
           <Rounded

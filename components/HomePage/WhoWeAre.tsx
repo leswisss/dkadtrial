@@ -3,7 +3,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
-import styles from "../../styles/HomePage/whoweare.module.scss"
+import styles from "../../styles/HomePage/whoweare.module.scss";
 
 const WhoWeAre = () => {
   const { ref: ref2, inView: inView2 } = useInView({
@@ -12,17 +12,29 @@ const WhoWeAre = () => {
   });
   //Translations
   const { t } = useTranslation();
-  
-  const secondPhrase = t("HomePage:wwatext")
+
+  const secondPhrase = t("HomePage:wwatext");
 
   const splitwords = (phrase: string, condition: boolean) => {
     let body: JSX.Element[] = [];
     phrase.split(" ").forEach((word, i) => {
-      body.push(<p key={`word-${i}`}><span style={{top: condition ? "0%" : "-100%"}} >{word}</span></p>);
+      body.push(
+        <p key={`word-${i}`}>
+          <span
+            style={{
+              transform: condition ? "translateY(0%)" : "translateY(-100%)",
+            }}
+            className={styles.spanner}
+          >
+            {word}
+          </span>
+        </p>
+      );
     });
 
     return body;
   };
+
   return (
     <div className={styles.about__main}>
       <div className={styles.about__title}>

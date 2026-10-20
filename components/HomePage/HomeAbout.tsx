@@ -40,7 +40,14 @@ const HomeAbout = ({
     phrase.split(" ").forEach((word, i) => {
       body.push(
         <p key={`word-${i}`}>
-          <span style={{ top: condition ? "0%" : "-100%" }}>{word}</span>
+          <span
+            style={{
+              transform: condition ? "translateY(0%)" : "translateY(-100%)",
+            }}
+            className={styles.spanner}
+          >
+            {word}
+          </span>
         </p>
       );
     });
