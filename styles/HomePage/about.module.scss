@@ -76,6 +76,11 @@
         .subheader {
           text-transform: capitalize;
           font-family: var(--semiBold-font);
+          font-size: var(--normal-font-size) !important;
+        }
+
+        .p__font {
+          font-size: var(--normal-font-size) !important;
         }
       }
     }
