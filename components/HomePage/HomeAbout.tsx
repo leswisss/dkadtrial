@@ -83,7 +83,7 @@ const HomeAbout = ({
                 <p className="p__font">{t("HomePage:optext")}</p>
               </div>
             </div>
-            {/* <div className={styles.content__three}>
+            <div className={styles.content__three}>
               <div className={styles.main__image_wrapper} ref={ref3}>
                 <div
                   className={styles.main__image_swiper}
@@ -133,7 +133,7 @@ const HomeAbout = ({
                   </div>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         <WhoWeAre />
